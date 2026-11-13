@@ -60,7 +60,7 @@ window.FAQ_DATA = [
       "앞당김이 필요한 사유 전달",
       "확정된 신청일과 활동 종료일을 각각 확인"
     ],
-    "warning": "변경은 협의·승인 조건을 확인. 날짜만 임의 변경하지 않기",
+    "warning": "당겨 신청해도 지급주기는 그대로일 수 있습니다. 구직활동은 당겨진 지정일까지 끝내고, 소득 확인은 원래 지급주기 종료일까지 필요한지 함께 확인하세요.",
     "basis": "M01 212 / 자료 확인",
     "needsConfirm": false,
     "route": null,
@@ -150,7 +150,8 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "external",
     "image": null,
-    "visual": "인정 조건 카드와 지원 방식 분기"
+    "visual": "인정 조건 카드와 지원 방식 분기",
+    "evidence": "apply"
   },
   {
     "id": "Q10",
@@ -286,13 +287,14 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "apply",
     "image": 6,
-    "visual": "공식 지원 이력 연결 이미지"
+    "visual": "공식 지원 이력 연결 이미지",
+    "evidence": "work"
   },
   {
     "id": "Q18",
     "question": "사람인 확인서는 휴대폰에서 어떻게 받아요?",
     "category": "proof",
-    "answer": "사람인 앱은 공식 도움말에서 확인서 이메일 전송 방법을 안내합니다. 받은 메일의 파일을 휴대폰에 저장하는 단계까지 진행하세요.",
+    "answer": "이번 회차 지원내역을 선택한 구직활동 확인서를 받고, 지원한 각 회사의 채용공고도 PDF로 따로 저장하세요. 모바일은 확인서를 이메일로 전송한 뒤 첨부파일을 내려받는 경로를 확인합니다.",
     "actions": [
       "MY 홈 → 입사지원 관리",
       "구직활동 확인서에서 지원 건 선택",
@@ -303,13 +305,14 @@ window.FAQ_DATA = [
     "needsConfirm": true,
     "route": "saramin",
     "image": null,
-    "visual": "모바일 실제 화면 추가 확보"
+    "visual": "모바일 실제 화면 추가 확보",
+    "evidence": "saramin"
   },
   {
     "id": "Q19",
     "question": "잡코리아 취업활동 증명서는 어디 있나요?",
     "category": "proof",
-    "answer": "잡코리아 공식 FAQ의 앱 경로는 로그인 → 전체 메뉴 → 취업활동증명서예요. 즉시지원한 내역인지도 확인하세요.",
+    "answer": "공식 FAQ의 앱 경로는 로그인 → 전체 메뉴 → 취업활동증명서입니다. 확인서에 담긴 각 지원 건의 채용공고도 PDF로 따로 준비하세요. 앱 출력이 안 되면 PC에서 진행하세요.",
     "actions": [
       "본인 계정 로그인",
       "전체 메뉴 → 취업활동증명서",
@@ -320,7 +323,8 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "job",
     "image": null,
-    "visual": "앱 메뉴와 발급 대상 예시"
+    "visual": "앱 메뉴와 발급 대상 예시",
+    "evidence": "job"
   },
   {
     "id": "Q20",
@@ -337,7 +341,8 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "external",
     "image": null,
-    "visual": "공고 발견→실제 지원처 흐름"
+    "visual": "공고 발견→실제 지원처 흐름",
+    "evidence": "external"
   },
   {
     "id": "Q21",
@@ -354,7 +359,8 @@ window.FAQ_DATA = [
     "needsConfirm": true,
     "route": "external",
     "image": null,
-    "visual": "발송일·수신 기업·제목 등 확인 예시"
+    "visual": "발송일·수신 기업·제목 등 확인 예시",
+    "evidence": "external"
   },
   {
     "id": "Q22",
@@ -371,7 +377,8 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "external",
     "image": null,
-    "visual": "원인 선택과 다음 행동"
+    "visual": "원인 선택과 다음 행동",
+    "evidence": "apply"
   },
   {
     "id": "Q23",
@@ -405,7 +412,8 @@ window.FAQ_DATA = [
     "needsConfirm": true,
     "route": "external",
     "image": null,
-    "visual": "잘 보이는 자료/누락 자료 비교"
+    "visual": "잘 보이는 자료/누락 자료 비교",
+    "evidence": "apply"
   },
   {
     "id": "Q25",
@@ -422,24 +430,26 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "training",
     "image": null,
-    "visual": "계획 확인→훈련 방식 선택"
+    "visual": "계획 확인→훈련 방식 선택",
+    "evidence": "training"
   },
   {
     "id": "Q26",
     "question": "훈련은 어떤 서류를 어디서 받아요?",
     "category": "learn",
-    "answer": "상담사에게 추가 제출이 필요한 자료를 확인한 뒤, 훈련기관에 이번 회차 참여·출석 확인 자료를 요청하세요.",
+    "answer": "학원 행정실에 훈련 참여확인서와 이번 회차 출석부를 요청하세요. 이번 회차 활동 시작일·종료일을 알려주고 해당 기간의 예정일수·실제 출석과 결석·지각·조퇴·외출 기록이 확인되게 받습니다.",
     "actions": [
-      "회차의 활동 시작·종료일 확인",
-      "상담사에게 전산 확인·추가서류 확인",
-      "훈련기관 행정 담당자에게 발급 요청"
+      "고용24·계획서에서 이번 회차 활동기간 확인",
+      "학원에 참여확인서와 해당 기간 출석부 요청",
+      "마지막 출결 확정 후 자료를 열어 확인"
     ],
-    "warning": "전산 확인 자료와 추가 제출 구분. 훈련기관에 해당 기간 참여·출석 자료 요청",
+    "warning": "훈련기관의 월별 정산기간과 본인 지급주기를 혼동하지 마세요. 전산 확인·제출 생략 범위는 담당기관 안내를 따릅니다.",
     "basis": "M01 196~197·213~214 / 일부 확인",
     "needsConfirm": true,
     "route": "classroom",
     "image": null,
-    "visual": "수강·출석 자료 예시와 요청문"
+    "visual": "수강·출석 자료 예시와 요청문",
+    "evidence": "training"
   },
   {
     "id": "Q27",
@@ -456,7 +466,8 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "classroom",
     "image": null,
-    "visual": "기간이 표시된 출석자료 예시"
+    "visual": "기간이 표시된 출석자료 예시",
+    "evidence": "training"
   },
   {
     "id": "Q28",
@@ -473,13 +484,14 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "remote",
     "image": null,
-    "visual": "신청/수강중/수료 비교"
+    "visual": "신청/수강중/수료 비교",
+    "evidence": "remote"
   },
   {
     "id": "Q29",
     "question": "취업특강을 매번 들어도 되나요?",
     "category": "learn",
-    "answer": "특강·단기집단·집단상담은 서로 다른 프로그램이에요. 특강을 반복하면 모두 인정된다고 생각하지 마세요.",
+    "answer": "2026.1 매뉴얼은 취업특강을 전체 취업지원서비스 기간 중 구직활동 2회까지만 인정합니다. 사이버진로교육의 해당 과정이 어떤 프로그램으로 계획에 반영되는지 먼저 확인하세요.",
     "actions": [
       "프로그램 종류 확인",
       "본인 계획에 반영됐는지 확인",
@@ -490,7 +502,8 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "program",
     "image": null,
-    "visual": "특강·단기집단·집단상담 비교"
+    "visual": "특강·단기집단·집단상담 비교",
+    "evidence": "cyber"
   },
   {
     "id": "Q30",
@@ -507,7 +520,8 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "exam",
     "image": null,
-    "visual": "접수증/응시확인서 비교"
+    "visual": "접수증/응시확인서 비교",
+    "evidence": "exam"
   },
   {
     "id": "Q31",
@@ -524,7 +538,8 @@ window.FAQ_DATA = [
     "needsConfirm": true,
     "route": "qnet",
     "image": null,
-    "visual": "시험 선택과 확인서 종류"
+    "visual": "시험 선택과 확인서 종류",
+    "evidence": "qnet"
   },
   {
     "id": "Q32",
@@ -541,7 +556,8 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "chamber",
     "image": null,
-    "visual": "검정 방식별 일정표"
+    "visual": "검정 방식별 일정표",
+    "evidence": "chamber"
   },
   {
     "id": "Q33",
@@ -558,7 +574,8 @@ window.FAQ_DATA = [
     "needsConfirm": true,
     "route": "exam",
     "image": null,
-    "visual": "시험 전 확인 카드·문의문"
+    "visual": "시험 전 확인 카드·문의문",
+    "evidence": "exam"
   },
   {
     "id": "Q34",
@@ -575,7 +592,8 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": "exam",
     "image": null,
-    "visual": "응시/합격/취득 구분"
+    "visual": "응시/합격/취득 구분",
+    "evidence": "exam"
   },
   {
     "id": "Q35",
@@ -621,25 +639,26 @@ window.FAQ_DATA = [
       "참여기간·지급일·금액 정리",
       "신고 대상·반영 회차를 상담사에게 확인"
     ],
-    "warning": "프로그램 참여 소득 구분. 비과세라고 임의 제외하지 않기",
-    "basis": "M01 206~208 / 자료 확인",
+    "warning": "프로그램 참여로 발생한 소득은 비과세라도 신고 대상이 될 수 있습니다. 소득 신고와 증빙 생략은 별개이고, 신고했다고 구직촉진수당이 무조건 전액 중단되는 것도 아닙니다.",
+    "basis": "M01 206~208 / 자료 확인 · L01·L02",
     "needsConfirm": false,
     "route": "apply",
     "image": null,
-    "visual": "소득 항목별 확인 표"
+    "visual": "소득 항목별 확인 표",
+    "evidence": "experience"
   },
   {
     "id": "Q38",
     "question": "소득이 생겨 수당을 못 받아도 신청해야 하나요?",
     "category": "income",
-    "answer": "소득 때문에 지급이 어려울 것 같아도 신청·신고를 임의로 생략하지 마세요. 해당 회차 처리 방법을 확인하세요.",
+    "answer": "소득 때문에 부지급 대상이더라도 소득 발생과 구직활동 이행 여부를 신고하기 위해 지급신청서를 제출해야 합니다. 본인이 안 나올 것 같다고 신청을 생략하지 마세요.",
     "actions": [
       "이번 회차 활동내역 정리",
       "발생 소득 정리",
       "신청서 제출과 소득 신고 방법 확인"
     ],
-    "warning": "지급 여부와 신청·신고 의무를 구분",
-    "basis": "M01 213 / 자료 확인",
+    "warning": "매뉴얼은 지급신청서 미제출 시 해당 지급주기 수급권 소멸 처리를 설명합니다. 담당 상담사와 제출 방법을 바로 확인하세요.",
+    "basis": "M01 213 / 자료 확인 · L01·L02",
     "needsConfirm": false,
     "route": null,
     "image": null,
@@ -694,7 +713,8 @@ window.FAQ_DATA = [
     "needsConfirm": false,
     "route": null,
     "image": null,
-    "visual": "갤럭시 실제 파일 선택 화면"
+    "visual": "갤럭시 실제 파일 선택 화면",
+    "evidence": "android"
   },
   {
     "id": "Q42",
@@ -711,7 +731,8 @@ window.FAQ_DATA = [
     "needsConfirm": true,
     "route": null,
     "image": null,
-    "visual": "아이폰 파일 앱 화면"
+    "visual": "아이폰 파일 앱 화면",
+    "evidence": "iphone"
   },
   {
     "id": "Q43",
@@ -728,7 +749,8 @@ window.FAQ_DATA = [
     "needsConfirm": true,
     "route": "apply",
     "image": 7,
-    "visual": "모바일 첨부 전·후 화면"
+    "visual": "모바일 첨부 전·후 화면",
+    "evidence": "apply"
   },
   {
     "id": "Q44",
@@ -802,7 +824,7 @@ window.FAQ_DATA = [
     "id": "Q48",
     "question": "제출했는데 입금이 안 됐어요. 뭘 확인해요?",
     "category": "submit",
-    "answer": "실제 제출·접수 여부와 보완 요청부터 확인하세요. 다른 사람의 입금일이 본인 입금일과 같지는 않아요.",
+    "answer": "실제 제출·접수 여부와 보완 요청부터 확인하세요. 매뉴얼은 지급신청서 접수일부터 14일 이내 지급 또는 지급 정지·중단 처리를 설명합니다. 모든 사람이 매달 같은 날 입금되는 것은 아닙니다.",
     "actions": [
       "회차 신청내역·처리 상태 확인",
       "보완 요청·계좌 관련 안내 확인",
@@ -814,5 +836,347 @@ window.FAQ_DATA = [
     "route": "apply",
     "image": 13,
     "visual": "확인 순서 카드"
+  },
+  {
+    "id": "Q49",
+    "question": "입사지원 두 건이면 어떤 파일을 몇 개 올리나요?",
+    "category": "proof",
+    "answer": "한 확인서에 두 지원 건이 함께 표시되면 확인서 1개 + A회사 공고 PDF 1개 + B회사 공고 PDF 1개, 기본적으로 총 3개를 준비합니다.",
+    "actions": [
+      "확인서에 두 기업·지원일이 들어 있는지 확인",
+      "각 공고 상세 내용을 PDF로 저장",
+      "파일 3개를 열어 회사·직무를 짝지어 확인"
+    ],
+    "warning": "서로 다른 사이트에 지원했으면 확인서는 각각 발급되어 파일 수가 늘어납니다. 이 파일 구성은 기관 제출 안내이며 법령이 전국 공통 3파일을 정한 것은 아닙니다.",
+    "basis": "담당자 제출 안내 / M01 213~214 일반 증빙 원칙",
+    "needsConfirm": true,
+    "evidence": "apply",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q50",
+    "question": "채용공고를 휴대폰에서 PDF로 어떻게 저장해요?",
+    "category": "proof",
+    "answer": "갤럭시 Chrome, 아이폰 Safari, PC 중 사용하는 기기를 골라 공고 상세 페이지를 PDF로 저장하세요. 링크 저장이나 스크랩만으로 끝내지 마세요.",
+    "actions": [
+      "실제 지원한 공고의 상세 화면 열기",
+      "기기별 인쇄·PDF 저장 순서 따라 하기",
+      "다운로드된 파일을 열어 모든 내용 확인"
+    ],
+    "warning": "앱 안에서 저장이 안 되면 브라우저에서 열거나 PC를 이용하세요. 빈 페이지·잘린 이미지·다른 회사 공고를 제출하지 마세요.",
+    "basis": "O11·O12 / 기기 공식 안내",
+    "needsConfirm": true,
+    "evidence": "pdf",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q51",
+    "question": "채용공고가 마감되거나 사라졌어요.",
+    "category": "proof",
+    "answer": "지원한 날 채용공고를 PDF로 저장해 두는 것이 좋습니다. 이미 사라졌다면 해당 기업·사이트에 자료를 문의하고 상담사에게 대체 증빙을 확인하세요.",
+    "actions": [
+      "지원내역의 원래 공고 링크 확인",
+      "기업·사이트에 해당 공고 자료 문의",
+      "대체 자료와 제출 방법 상담"
+    ],
+    "warning": "다른 공고나 새로 올라온 공고로 바꾸거나 모집기간을 수정하지 마세요.",
+    "basis": "담당자 제출 안내 / M01 213~214",
+    "needsConfirm": true,
+    "evidence": "apply",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q52",
+    "question": "서로 다른 사이트에서 한 건씩 지원했어요.",
+    "category": "proof",
+    "answer": "사람인 한 건·잡코리아 한 건이면 확인서도 각 사이트에서 받습니다. 기본 준비 예시는 확인서 2개와 공고 PDF 2개, 총 4개입니다.",
+    "actions": [
+      "사이트별 실제 지원내역 확인",
+      "확인서 각 1개 발급",
+      "지원한 공고 2개를 각각 저장"
+    ],
+    "warning": "같은 사이트의 한 확인서에 두 건이 함께 나오는 경우와 파일 수가 다릅니다. 전산 연계·대체 자료 안내가 있으면 함께 확인하세요.",
+    "basis": "담당자 제출 안내 / O03·O05",
+    "needsConfirm": true,
+    "evidence": "apply",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q53",
+    "question": "PDF에 공고 이미지가 안 나오거나 잘려요.",
+    "category": "proof",
+    "answer": "완료됐다고 제출하지 말고 공고 전용 인쇄 버튼과 PC 인쇄를 확인하세요. 미리보기와 저장한 PDF의 모든 페이지를 확인합니다.",
+    "actions": [
+      "공고 상세내용과 이미지 모두 펼치기",
+      "인쇄 미리보기의 배율·방향·페이지 확인",
+      "파일을 다시 열어 내용 확인"
+    ],
+    "warning": "빈 PDF나 제목만 있는 파일은 채용내용을 확인하기 어렵습니다. 해결이 안 되면 담당기관에 대체 자료를 문의하세요.",
+    "basis": "O11 / 기기 공식 안내",
+    "needsConfirm": true,
+    "evidence": "pc",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q54",
+    "question": "사이버진로교육은 어디서 듣고 수료증을 받아요?",
+    "category": "learn",
+    "answer": "한국고용정보원 사이버진로교육센터의 교육안내 → 온라인교육에서 과정을 고릅니다. 수강 후 마이페이지에서 수료 여부와 수료증 발급을 확인하세요.",
+    "actions": [
+      "상담사와 과정·인정 조건 확인",
+      "공식 센터에서 수강신청 후 학습·수료",
+      "본인 이름·과정·수료일 확인 후 저장"
+    ],
+    "warning": "온라인 강의를 아무거나 듣는다고 모두 인정되지 않습니다. 로그인 후 최신 수료증 버튼 위치는 센터 안내를 확인해야 합니다.",
+    "basis": "O13·M01 198 / 공식 교육목록·추가 화면 확인 필요",
+    "needsConfirm": true,
+    "evidence": "cyber",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q55",
+    "question": "수강은 다 했는데 수료증 버튼이 없어요.",
+    "category": "learn",
+    "answer": "진도 저장, 평가·설문 등 과정별 수료조건, 수료 처리 여부를 먼저 확인하세요. 아직 수강 중이면 수료증이 나오지 않을 수 있습니다.",
+    "actions": [
+      "마이페이지의 과정·수료 상태 확인",
+      "남은 학습·평가·설문 조건 확인",
+      "센터에 발급 시점·위치 문의"
+    ],
+    "warning": "모든 과정에 같은 진도율·평가기준을 적용하지 마세요. 수강신청 화면은 수료 증빙이 아닙니다.",
+    "basis": "O13 / 로그인 후 발급 위치 추가 확인 필요",
+    "needsConfirm": true,
+    "evidence": "cyber",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q56",
+    "question": "학원에 출석부는 며칠부터 며칠까지 달라고 하나요?",
+    "category": "learn",
+    "answer": "고용24·취업활동계획서에 확정된 이번 회차 활동기간을 알려주세요. 훈련기간과 겹치는 실제 참여 내역이 구분되어야 합니다.",
+    "actions": [
+      "이번 회차 시작일·종료일 확인",
+      "학원에 해당 기간 참여확인서·출석부 요청",
+      "두 달에 걸치면 양쪽 월 자료와 해당 기간 집계 요청"
+    ],
+    "warning": "학원의 1일~말일 정산기간을 그대로 본인 회차라고 생각하지 마세요. 당겨 신청·유예·변경 이력은 별도 확인하세요.",
+    "basis": "M01 196~197·213~214 / 담당자 서류 안내",
+    "needsConfirm": true,
+    "evidence": "training",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q57",
+    "question": "지정일 당일에도 수업이 있는데 서류는 언제 받아요?",
+    "category": "learn",
+    "answer": "발급 소요시간은 미리 문의하되 아직 하지 않은 출석을 완료로 확인받지 마세요. 최종 출결 확정과 제출·보완 방법을 학원·상담사와 조율해야 합니다.",
+    "actions": [
+      "며칠 전 학원에 최종 발급 가능일 문의",
+      "종료일까지 실제 출결 확정 여부 확인",
+      "서류가 늦으면 사전에 상담사에게 절차 확인"
+    ],
+    "warning": "예정 출석으로 확정 자료를 만들거나 지정일을 임의로 넘기지 마세요.",
+    "basis": "M01 213 / 제출·보완 개별 확인",
+    "needsConfirm": true,
+    "evidence": "training",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q58",
+    "question": "훈련 출석 앱은 무엇을 쓰고 입실·퇴실은 어떻게 해요?",
+    "category": "learn",
+    "answer": "고용24 직업훈련 출결관리 앱과 학원의 출결 방식을 확인하세요. 일반 고용24 앱 설치만으로 출석이 자동 처리되는 것은 아닙니다.",
+    "actions": [
+      "공식 출결 앱·기기·훈련과정 확인",
+      "현장에서 안내된 QR·비콘 방식으로 입실·퇴실 처리",
+      "당일 시간이 실제 기록됐는지 확인"
+    ],
+    "warning": "학원마다 방식이 다릅니다. 오류·누락은 바로 학원에 알리고 정정 절차를 안내받으세요. 대리 출석은 안 됩니다.",
+    "basis": "O14 / 공식 출결 앱·FAQ",
+    "needsConfirm": true,
+    "evidence": "training",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q59",
+    "question": "지각·조퇴·외출도 출석률에 영향이 있나요?",
+    "category": "learn",
+    "answer": "영향이 있습니다. 매뉴얼은 하루 소정시간의 50% 미만 수강은 결석, 지급주기 중 지각·조퇴·외출 합계 3회는 1일 결석으로 설명합니다.",
+    "actions": [
+      "당일 출결 기록 확인",
+      "공결 등 인정사유·증빙은 학원에 확인",
+      "이번 회차 출석률과 과정별 예외 확인"
+    ],
+    "warning": "단기·단시간 과정은 시간으로 출석률을 계산하는 등 예외가 있으므로 날짜 수만으로 판단하지 마세요.",
+    "basis": "M01 197 / 자료 확인",
+    "needsConfirm": true,
+    "evidence": "training",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q60",
+    "question": "일경험도 참여확인서와 출석 자료를 받아야 하나요?",
+    "category": "learn",
+    "answer": "운영기관에 이번 회차의 참여확인 자료와 출결 내역을 요청하세요. 누가 발급·확인하는지와 사업별 요구 서류를 먼저 확인합니다.",
+    "actions": [
+      "사업명·운영기관·회차 기간 확인",
+      "참여확인 자료와 해당 기간 출결 내역 요청",
+      "프로그램 수당 신고도 함께 확인"
+    ],
+    "warning": "훈련 출결 앱을 모든 일경험에 공통 적용하지 마세요. 프로젝트형은 별도로 정한 이행조건과 자료가 필요할 수 있습니다.",
+    "basis": "M01 198·206~208 / 담당자 서류 안내",
+    "needsConfirm": true,
+    "evidence": "experience",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q61",
+    "question": "일경험 프로젝트형이라 출석일수가 없어요.",
+    "category": "learn",
+    "answer": "매뉴얼은 참여일수가 확인되지 않는 프로젝트형 등에 활동 특성을 고려한 구체적인 구직활동 의무를 정해 이행을 확인하도록 설명합니다.",
+    "actions": [
+      "상담사와 정한 구체적인 이행조건 확인",
+      "운영기관의 활동일지·결과물·완료자료 확인",
+      "해당 지급주기 이행과 증빙을 연결"
+    ],
+    "warning": "수당을 받았다는 사실이나 참여자로 등록된 사실만으로 활동 이행이 증명된다고 생각하지 마세요.",
+    "basis": "M01 198 / 자료 확인",
+    "needsConfirm": true,
+    "evidence": "experience",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q62",
+    "question": "이번 회차에 몇 개의 활동을 해야 하나요?",
+    "category": "scope",
+    "answer": "본인 취업활동계획에 정한 활동 전체를 확인하세요. 2026.1 매뉴얼은 2회차 이후 최소 2개, 계획 재진단 필수 대면상담이 포함되면 3개 이상을 설명합니다.",
+    "actions": [
+      "계획에 정한 활동 종류·횟수 확인",
+      "입사지원 외 상담·프로그램도 확인",
+      "못 할 사유가 생기면 미리 상담사에게 연락"
+    ],
+    "warning": "항상 입사지원 두 번만 하면 된다고 생각하지 마세요. 계획이 3개면 2개만 했을 때 전액 지급과 다릅니다.",
+    "basis": "M01 196 / 자료 확인",
+    "needsConfirm": true,
+    "evidence": "apply",
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q63",
+    "question": "소득을 신고하면 수당은 무조건 못 받나요?",
+    "category": "income",
+    "answer": "소득 신고가 곧 전액 지급정지는 아닙니다. 소득 종류·금액·프로그램 참여소득 여부와 본인 월 지급액에 따라 감액·정지 판단이 달라집니다.",
+    "actions": [
+      "소득 종류·금액·발생일 정리",
+      "신청서에 신고하고 필요한 자료 확인",
+      "기관이 산정한 감액·정지 사유 확인"
+    ],
+    "warning": "옛 안내의 월 50만원 초과 즉시 중단 기준을 그대로 쓰지 마세요. 이 페이지는 소득 공제나 지급액을 자동 판정하지 않습니다.",
+    "basis": "M01 206~208·법 제21조·시행령 제9~9조의2 / 자료 확인 · L01·L02",
+    "needsConfirm": true,
+    "evidence": null,
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q64",
+    "question": "1회차도 입사지원 두 건을 준비해야 하나요?",
+    "category": "dates",
+    "answer": "1회차는 취업활동계획 수립 완료를 전제로 합니다. 2회차 이후 구직활동 제출과 같다고 생각하지 말고 상담사가 안내한 의무와 신청 절차를 확인하세요.",
+    "actions": [
+      "취업활동계획 수립 완료 여부 확인",
+      "상담사가 부과한 상담·검사 등 이행 확인",
+      "1회차 신청 절차 안내받기"
+    ],
+    "warning": "취업활동계획 수립 전에 2회차와 같은 활동·서류를 임의로 대신 제출하지 마세요.",
+    "basis": "M01 192~196·211 / 자료 확인",
+    "needsConfirm": true,
+    "evidence": null,
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q65",
+    "question": "2026년 수당은 얼마이고 가족수당은 어떻게 확인하나요?",
+    "category": "income",
+    "answer": "2026.1 매뉴얼의 기본수당은 월 60만원, 가족수당은 대상 부양가족 1명당 10만원·월 최대 40만원입니다. 실제 회차 지급액은 이행·소득 등 요건에 따라 달라집니다.",
+    "actions": [
+      "본인 월 지급액·대상 가구원 확인",
+      "출생 등 변경사항은 담당 상담사에게 알리기",
+      "해당 회차 가족수당 신청 내용 확인"
+    ],
+    "warning": "대상은 심사에서 확정된 가구원 중 18세 이하·70세 이상·중증장애인 등입니다. 신청 후 출생한 신생아 등 예외와 중복 조건은 기관 확인이 필요합니다.",
+    "basis": "M01 192~195, O02 / 자료 확인",
+    "needsConfirm": true,
+    "evidence": null,
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q66",
+    "question": "계좌가 잘못됐거나 압류되어 수당을 못 받아요.",
+    "category": "submit",
+    "answer": "지급계좌 오류나 압류 문제가 있으면 담당기관에 바로 알리세요. 본인 명의 계좌와 수급권 보호용 계좌의 신청 가능 여부·변경 절차를 안내받으세요.",
+    "actions": [
+      "신청서 은행·계좌·예금주 확인",
+      "오류·압류 상황을 담당기관에 알리기",
+      "필요 서류·계좌 변경 또는 전용계좌 절차 확인"
+    ],
+    "warning": "타인 명의 계좌로 임의 변경하거나 계좌번호·신분증을 이 안내 사이트에 올리지 마세요.",
+    "basis": "M01 215, 법 제22~23조 / 개별 절차 확인 · L01",
+    "needsConfirm": true,
+    "evidence": null,
+    "route": null,
+    "image": null,
+    "visual": ""
+  },
+  {
+    "id": "Q67",
+    "question": "계획한 활동을 일부 못 했는데 전액 받을 수 있나요?",
+    "category": "scope",
+    "answer": "최소 활동 개수만 채워도 본인 계획의 모든 의무를 이행한 것은 아닙니다. 일부 미이행은 감액, 정당한 사유 없는 미이행은 중단 등으로 이어질 수 있습니다.",
+    "actions": [
+      "완료·미완료 활동을 정확히 구분",
+      "못 한 사유가 생긴 즉시 상담사에게 알리기",
+      "변경·유예 등 절차와 처분 사유 확인"
+    ],
+    "warning": "하지 않은 활동을 완료했다고 신고하거나 서류를 수정하지 마세요. 자료 보완과 실제 미이행은 구분해야 합니다.",
+    "basis": "M01 196·214~215, 법 제26조 / 자료 확인 · L01",
+    "needsConfirm": true,
+    "evidence": null,
+    "route": null,
+    "image": null,
+    "visual": ""
   }
 ];

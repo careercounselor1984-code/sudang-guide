@@ -73,7 +73,7 @@ document.querySelector('.journey').innerHTML='<div class="journey-top"><span>이
 document.querySelector('.scope span').textContent='검토용 안내입니다. 실제 신청은 고용24에서 진행합니다. 본인 취업활동계획과 기관 안내를 함께 확인하세요. 공식 PC 이미지와 직접 만든 설명·서류 예시는 구분해 표시했습니다.';
 document.querySelector('#sources>p').textContent='자료 확인일 2026.11.11 · 2026.1 업무매뉴얼과 공식 이용안내를 참고했습니다. 고용24 화면 이미지는 고용24 PC 이용가이드의 예시 화면이며, 날짜·금액은 본인 정보가 아닙니다. 화면·규정 변경 및 모바일 차이는 추가 검증이 필요합니다. 2027년 기준은 미반영입니다.';
 let vr='apply',vi=0;const player=document.querySelector('#visualPlayer');
-function setRoute(id,scroll=true){vr=id;vi=0;renderVisual();if(scroll)player.scrollIntoView({behavior:'instant',block:'start'})}
+function setRoute(id,scroll=true){const ev=({classroom:'training',program:'cyber'})[id]||id;if(id!=='apply'&&window.Evidence?.guides[ev]){location.hash='#evidence/'+ev+'/0';return}vr=id;vi=0;renderVisual();if(scroll)player.scrollIntoView({behavior:'instant',block:'start'})}
 function renderVisual(){const r=visualRoutes[vr],s=r.slides[vi];document.querySelectorAll('[data-route]').forEach(b=>{b.classList.toggle('selected',b.dataset.route===vr);b.setAttribute('aria-pressed',String(b.dataset.route===vr))});let figure='';
  if(s.img)figure=`<figure class="official-figure"><button class="image-zoom" data-zoom="${s.img}" aria-label="${s.title} 공식 화면 크게 보기"><img src="${s.img}" alt="고용24 공식 PC 화면: ${s.title}"></button><figcaption>고용24 공식 PC 안내 화면 · 누르면 크게 볼 수 있어요</figcaption></figure>`;
  if(s.path)figure=`<div class="menu-figure"><span class="figure-label">메뉴 순서 설명도 · 실제 화면 캡처가 아닙니다</span>${s.path.map((p,i)=>`<div class="menu-node"><b>${i+1}</b><span>${p}</span></div>${i<s.path.length-1?'<div class="menu-down">↓</div>':''}`).join('')}</div>`;

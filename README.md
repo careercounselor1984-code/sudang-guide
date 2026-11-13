@@ -19,9 +19,12 @@
 
 ## 수정
 
-- faq-data.js: 질문 48개와 답변
+- faq-data.js: 질문 67개와 답변
 - faq.js / faq.css: 질문 중심 화면
 - visual-guide.js / visual-guide.css: 단계별 화면·서류 안내
 - tracker.js / tracker-core.js / tracker.css: 선택 기록장
 
 공식 규정과 메뉴가 변경되면 내용과 확인 범위를 갱신하세요.
+
+- evidence.js / evidence.css: 증빙 만들기 17개 경로·80단계. 입사지원 파일 구성·기기별 PDF·응시확인·사이버교육·훈련·일경험 안내.
+- 출석부·확인서 요청문과 파일 이름은 예시이며, 실제 발급 서류나 기관 공통 서식이 아닙니다.
