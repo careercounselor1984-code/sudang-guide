@@ -29,8 +29,12 @@ const guides={
  experience:{name:'일경험: 참여·출결 자료',icon:'◎',sub:'운영기관 확인 + 이번 회차 내역',steps:[step('본인 일경험 사업과 계획을 먼저 확인해요.','사업명·운영기관·참여기업·참여기간을 확인하고 상담사와 정한 활동인지 점검하세요. 일반 취업인지 일경험 연계인지도 구분합니다.',['일경험 사업명·유형','운영기관 담당자','이번 회차 활동기간','취업활동계획 반영'],{warning:'모든 인턴·현장실습을 같은 일경험으로 보지 마세요. 근로계약·참여수당·취업 처리와 관련된 내용은 시작 전에 상담사에게 알립니다.'}),step('운영기관에 참여확인서와 출결 자료를 요청해요.','운영기관 또는 참여기업 중 누가 최종 확인·발급하는지 운영기관 담당자에게 먼저 확인합니다.',[],{files:[['일경험 참여확인 자료','이름·사업·기업·참여기간·기관 확인'],['이번 회차 출결 자료','예정일수·실제 참여일·결석·지각 등']],copy:'국민취업지원제도 구직촉진수당 제출용 일경험 참여확인서와 출결 자료를 요청드립니다. 이번 회차는 [시작일]~[종료일], 사업명은 [사업명], 참여기업은 [기업명]입니다. 해당 기간 참여 예정일수·실제 참여일수와 출결이 확인되는 최종 자료, 발급 담당자와 받을 날짜를 알려주세요.'}),step('출결 방식은 운영기관 안내를 따르세요.','일경험은 훈련 출결 앱을 반드시 쓰는 것이 아닙니다. 전자 출결·서명부·활동일지 등 해당 사업의 방식을 확인하세요.',['시작 전 출결 방식 확인','매일 실제 참여 기록','누락·지각·결석 즉시 보고','마감 후 최종 확인자료 요청'],{warning:'기록을 대리 작성하거나 실제 참여 전 확인받지 마세요. 정정은 기관의 절차와 증빙에 따라 처리합니다.'}),step('프로젝트형은 활동일수만으로 판단하지 않아요.','매뉴얼은 참여일수가 확인되지 않는 프로젝트형 등에 구체적인 활동 의무를 정해 이행 여부를 확인하도록 설명합니다.',['상담사와 구체적인 이행조건 확인','운영기관 활동일지·결과물 등 준비','완료·참여 사실 확인'],{basis:'2026.1 매뉴얼 인쇄 198쪽',warning:'수당을 받았다는 사실만으로 활동을 이행했다고 보는 것은 아닙니다. 결과물·회의·활동보고 등 요구 자료를 사전에 정하세요.'}),step('참여율과 프로그램 수당 신고를 함께 확인해요.','일수형은 매뉴얼상 이번 지급주기 예정일수의 80% 이상 참여, 예정일수 10일 이상은 활동 2개·미만은 1개입니다. 프로그램 참여로 받은 소득도 별도로 신고 여부를 확인하세요.',['이번 회차 참여율','계획의 나머지 활동','참여수당 종류·발생일·금액'],{basis:'2026.1 매뉴얼 인쇄 198·206~208쪽',warning:'일경험 참여 증빙 제출과 수당 소득 신고는 별개입니다. 세금이 없거나 소액이어도 임의로 빼지 마세요.'}),finish()]}
 };
 
+source.qnet='https://www.q-net.or.kr/iss001.do?gId=&gSite=&id=iss00101';
 source.income='https://www.work24.go.kr/cm/c/d/0180/retrieveSiteEasyDetailHpcm.do?tycd=E6T00&utzeGuidId=GUID000110';
 const incomeStep=(title,text,focus,more={})=>step(title,text,[],{focus,source:'income',...more});
+guides.cyber.steps[2].warning+=' 공식 빌드업교육은 수료증 미발급 과정입니다. 온라인교육도 과정별 발급 여부를 확인하세요.';
+guides.cyber.steps[4].path=['마이페이지','수료이력조회','본인 연도·수료과정','수료증 인쇄·발급 항목 확인'];
+guides.cyber.steps[4].text='공개 공식 메뉴에서 마이페이지 → 수료이력조회를 확인했습니다. 수료한 연도와 과정을 조회해 수료증 인쇄·발급 항목을 찾으세요. 최신 로그인 후 버튼 배치는 개인 화면에서 확인해야 합니다.';
 guides.income={name:'프로그램소득 신고',icon:'₩',sub:'훈련장려금·일경험 → 입력란별 공식 화면',steps:[
  incomeStep('훈련장려금·일경험 참여소득도 신고해요.','직업훈련 참여로 받은 훈련장려금, 일경험 참여로 발생한 소득은 프로그램소득으로 신고합니다. 활동 증빙을 냈더라도 소득 신고를 별도로 확인해야 합니다.',{box:[190,285,1550,530],crop:[150,225,1630,630],label:'실제 공식 화면: 소득 발생 신고 영역'},{warning:'같은 소득을 근로소득과 프로그램소득 양쪽에 중복 입력하지 마세요. 프로그램 참여소득과 별도 아르바이트 소득이 함께 있으면 각각 구분합니다. 소득 종류가 불명확하면 사업명·지급 주체·내역을 상담사에게 보여주세요.',basis:'2026.1 매뉴얼 인쇄 206~209쪽'}),
  incomeStep('신청서의 「소득 발생 신고」에서 「예」를 눌러요.','고용24 → 취업지원 → 국민취업지원제도 → Ⅰ유형 구직촉진수당 신청 → 해당 회차 신청서에서 아래 항목을 찾으세요.',{box:[1430,317,110,60],crop:[1380,285,345,130],label:'① 「예」 선택 위치'},{warning:'프로그램소득을 받았는데 「아니오」로 두고 제출하지 마세요. 아직 받을 예정인 돈과 실제 지급된 돈은 구분합니다.'}),
@@ -58,5 +62,15 @@ function render(hash){const root=document.querySelector('#helpApp');const parts=
  const iz=root.querySelector('[data-income-zoom]');if(iz)iz.onclick=()=>openZoom('assets/work24-8.png');
  const copy=root.querySelector('#evCopy');if(copy)copy.onclick=async()=>{try{await navigator.clipboard.writeText(s.copy);root.querySelector('#evCopyResult').textContent='복사했어요. 날짜·과정명을 바꿔서 보내세요.'}catch{root.querySelector('#evCopyResult').textContent='요청문을 길게 눌러 복사하세요.'}};
 }
-window.Evidence={render,guides};
+function manuals(){const root=document.querySelector('#helpApp');root.innerHTML=`<div class="answer-top"><a href="#questions" class="back-help">← 질문 찾기</a><span>공식 자료 모음</span></div><article class="answer-card"><h1>따로 볼 수 있는<br>매뉴얼·발급 안내</h1><p class="short-answer">제도 규칙은 업무매뉴얼·법령으로, 버튼 위치는 서비스별 이용안내로 확인해요. 모든 발급부터 제출까지 한 권에 담긴 최신 모바일 통합 매뉴얼이 확인된 것은 아닙니다.</p>${[
+['고용24 구직촉진수당 신청 가이드',source.income,'회차·활동·첨부·소득·최종 제출의 공식 PC 예시. 이미지 속 날짜·금액은 예시입니다.'],
+['큐넷 확인서 발급안내',source.qnet,'확인서 발급신청·발급내역과 출력 오류 안내. 실제 응시확인서와 접수확인서를 구분하세요.'],
+['큐넷 그림 설명 자료','https://www.q-net.or.kr/qnet/certify/main.html','공식 제공 자료이지만 2014년 내역과 시험접수확인서 예시가 나오는 과거 화면입니다. 최신 응시확인서 화면으로 오해하지 마세요.'],
+['사이버진로교육 온라인교육','https://www.work.go.kr/cyberedu/cyb/education/schedule/elearning/retrieveScheduleElearningList.do','수강신청·학습·과정별 수료증 발급 여부를 확인합니다.'],
+['사이버진로교육 빌드업교육','https://www.work.go.kr/cyberedu/cyb/education/schedule/buildup/retrieveScheduleBuildupList.do','수료증 미발급 과정 안내와 마이페이지의 수료이력조회 메뉴를 확인할 수 있습니다.'],
+['잡코리아 공식 FAQ',source.job,'취업활동증명서의 발급 메뉴·대상 내역을 확인합니다.'],
+['사람인 공식 도움말',source.saramin,'구직활동 확인서의 발급·모바일 이메일 전송을 확인합니다.'],
+['대한상공회의소 공식 FAQ',source.chamber,'시험응시확인서 출력 위치와 검정별 발급 가능일을 확인합니다.']
+].map(([a,b,c])=>`<section class="answer-detail"><h2 style="font-size:18px">${E(a)}</h2><p>${E(c)}</p><a class="source-link" href="${b}" target="_blank" rel="noopener noreferrer">공식 안내 열기 ↗</a></section>`).join('')}<div class="avoid-mistake"><span>!</span><div><b>블로그는 이용 경험을 찾는 참고자료예요.</b><p>실업급여·Ⅱ유형·과거 금액·옛 사이트 화면이 섞일 수 있습니다. 활동 인정과 지급 조건은 본인 계획·기관 안내·현행 기준을 확인하세요. 2026.1 업무매뉴얼 원본은 이 공개 사이트에서 재배포하지 않습니다.</p></div></div></article>`}
+window.Evidence={render,guides,manuals};
 })();
