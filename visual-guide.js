@@ -1,0 +1,96 @@
+// Each route is a sequence of visible actions. Official captures and illustrative
+// document examples are explicitly distinguished in the renderer.
+const VS={work:official,saramin:'https://www2.saramin.co.kr/zf_user/help/help-word/main?count=20&inquiryCode=1641&keyword=&listType=list&memberCode=1638&page=2',job:'https://m.jobkorea.co.kr/help',qnet:'https://www.q-net.or.kr/',qfaq:'https://www.q-net.or.kr/cst002.do?artlSeq=5069612&gId=09&gSite=L&id=cst00202',chamber:'https://license.korcham.net/customer/faqMain.do?pg=8&searchWord=&searchYn=Y',program:'https://www.work24.go.kr/cm/c/d/0200/selectGov24UtilList.do'};
+const shot=(n,title,caption,extra={})=>({title,caption,img:`assets/work24-${n}.png`,source:VS.work,...extra});
+const menu=(title,caption,path,extra={})=>({title,caption,path,...extra});
+const doc=(title,caption,docTitle,fields,extra={})=>({title,caption,docTitle,fields,...extra});
+const attach=()=>shot(7,'준비한 파일을 여기에 첨부하세요.','고용24 수당 신청 화면의 「첨부파일 등록」을 눌러 저장한 증빙을 선택하세요.',{check:'파일 이름이 표시되는지, 다른 회차의 자료가 아닌지 확인하세요.',note:'그림 속 용량·확장자 조건보다 실제 신청 화면의 현재 안내를 우선하세요.'});
+const ready=()=>({title:'제출 전에 네 가지를 확인해요.',caption:'활동일·자료·소득 신고·실제 제출을 확인하세요.',checks:['이번 회차에 계획한 활동을 모두 확인했어요.','활동일과 증빙의 이름·기업·기관이 맞아요.','소득·취업 여부를 확인하고 필요한 신고를 했어요.','고용24에서 실제 제출 결과를 확인할 거예요.'],jump:'apply'});
+const visualRoutes={
+ apply:{icon:'↗',name:'수당 신청하기',sub:'공식 화면 13장으로 따라 하기',group:'신청',slides:[
+ shot(1,'Ⅰ유형 수당 신청 메뉴를 누르세요.','고용24에 개인 로그인한 뒤 취업지원 → 국민취업지원제도 → Ⅰ유형 구직촉진수당 신청으로 이동하세요.',{action:work,actionText:'고용24 열기',check:'실업급여의 실업인정 신청 메뉴와 구분하세요.'}),
+ shot(2,'이번 회차를 선택하고 신청을 누르세요.','신청할 회차 앞의 선택칸을 누른 뒤 「구직촉진수당 신청」을 누르세요.',{check:'이미지의 날짜와 금액은 예시입니다. 본인 회차를 확인하세요.'}),
+ shot(3,'지정일과 활동기간부터 확인하세요.','「취업활동계획 내용 보기」에서 이번 회차에 하기로 한 활동도 확인하세요.',{check:'회차·지정일·활동기간이 본인 계획과 맞아야 합니다.'}),
+ shot(4,'훈련·프로그램 참여 내역을 등록하세요.','해당하는 활동의 「이행 등록」을 눌러 실제 참여 기간을 입력하세요.',{note:'입사지원만 계획했다면 다음 화면을 확인하세요. 입력할 활동은 본인 계획에 따라 다릅니다.'}),
+ shot(5,'입사지원 등 구직활동 내역을 등록하세요.','해당 계획에서 「이행 등록」을 누르고 활동명·활동일·내용을 확인하세요.',{check:'실제로 한 활동과 증빙의 날짜를 맞추세요.'}),
+ shot(6,'고용24 지원 이력을 골라 적용하세요.','고용24 직접지원이라면 연결할 내역을 선택하고 「적용」을 누르세요.',{note:'외부 기업 홈페이지에서 지원했다면 이 목록에 없을 수 있습니다. 활동별 증빙 안내에서 해당 경로를 확인하세요.'}),
+ attach(),
+ shot(8,'소득이 발생했다면 신고하세요.','소득 발생 여부를 사실대로 선택하고 해당 내용과 필요한 자료를 입력하세요.',{check:'알바·사업·프로그램 수당 등은 종류와 발생 시점을 함께 확인하세요.'}),
+ shot(9,'취업했거나 예정되어 있다면 신고하세요.','취업 여부와 취업일·근무시간 등 화면에서 요구하는 정보를 확인하세요.'),
+ shot(10,'가족수당 해당 여부를 확인하세요.','대상 가구원과 이번 회차 신청 내용을 확인하세요.',{note:'가족수당 요건은 본인 자격 심사와 해당 회차 기준에 따라 확인합니다.'}),
+ shot(11,'본인 명의 수령 계좌를 확인하세요.','은행·계좌번호·예금주가 맞는지 확인하세요.',{check:'실제 개인정보는 이 안내 페이지에 입력하지 않습니다.'}),
+ shot(12,'저장과 제출을 구분하세요.','지정일 전이면 제출예약 조건을, 지정일 당일이면 저장 후 제출 절차를 확인하세요.',{check:'저장만 하고 끝내지 마세요. 예약 여부 또는 실제 제출 상태를 확인하세요.',note:'제출예약 처리 시각은 실제 화면의 안내를 확인하세요.'}),
+ shot(13,'신청 완료 화면까지 확인하세요.','고용24에서 본인 신청 회차와 제출 결과를 다시 확인하세요.',{check:'안내 페이지의 체크 완료는 실제 수당 신청 완료가 아닙니다.'})]},
+ training:{icon:'▤',name:'직업훈련 증빙',sub:'출석·수료 자료 → 발급 요청 → 첨부',group:'교육',slides:[
+ {title:'어떤 방식으로 훈련받고 있나요?',caption:'훈련 방식에 따라 확인할 자료와 인정 기준이 달라요.',choices:[['classroom','학원에 출석하거나 실시간 수업을 들어요','출석 자료 확인'],['remote','녹화된 원격훈련을 수강해요','수료 자료 확인']],note:'먼저 담당 상담사와 협의해 본인 취업활동계획에 포함된 훈련인지 확인하세요.'}]},
+ classroom:{icon:'▤',name:'출석하는 직업훈련',sub:'참여·출석 확인 자료 준비',group:'교육',slides:[
+ {title:'출석과 이번 회차 기간을 확인하세요.',caption:'2026.1 매뉴얼은 IAP에 포함된 훈련과 출석 요건을 기준으로 설명합니다.',tiles:[['① 계획','이번 회차에 반영된 훈련'],['② 출석','해당 기간 출석·예정일수'],['③ 자료','참여·출석을 확인할 자료']],note:'매뉴얼 기준 소정 훈련일수의 80% 이상 출석, 지급주기 내 예정일수 10일 이상/미만 등에 따라 인정 개수가 달라집니다. 짧은 과정·지각·조퇴·자비훈련 등은 별도 조건을 확인하세요.',sourceText:'2026.1 업무매뉴얼 인쇄쪽 196~197쪽 · 현행 기준 대조 필요'},
+ menu('훈련기관 행정 담당자에게 요청하세요.','전산으로 확인되는 자료와 추가 제출 자료를 먼저 상담사에게 확인한 뒤, 필요한 자료를 요청하세요.',['훈련기관 행정실·담당자','훈련 참여·수강 확인 자료','이번 회차 출석 자료'],{copy:'국민취업지원제도 구직촉진수당 신청에 사용할 자료가 필요합니다. 이번 회차 활동기간은 [시작일]~[종료일]입니다. 제 이름, 과정명, 훈련기간과 해당 기간 출석 내역을 확인할 수 있는 자료를 발급받을 수 있을까요?',note:'수강증명서·훈련참여확인서·출석부 등 실제 명칭은 기관마다 다릅니다. 모든 자료가 일괄 필수인 것은 아닙니다.'}),
+ doc('서류에서 이 부분을 확인하세요.','이번 회차의 출석 내역과 과정 정보가 확인되는지 살펴보세요.','훈련 참여·출석 자료 예시',[['이름','홍길동'],['훈련과정','사무 실무 과정'],['확인기간','본인 회차 시작일 ~ 종료일'],['출석내역','예정일수·출석일수 등'],['발급기관','실제 훈련기관']],{check:'전체 훈련기간만 적힌 자료로 이번 회차 출석이 확인되는지도 점검하세요.'}),attach(),ready()]},
+ remote:{icon:'▷',name:'원격훈련 수료 증빙',sub:'수료일·총시간 확인',group:'교육',slides:[
+ {title:'강의를 신청한 것과 수료한 것은 달라요.',caption:'원격훈련은 수료 여부와 수료일을 확인하세요.',tiles:[['신청','수강 신청만 함'],['수강','아직 학습 중'],['수료','완료 기준 충족 ✓']],note:'2026.1 매뉴얼은 수료일이 포함된 지급주기에 인정하며, 40시간 이상/미만에 따라 인정 개수를 구분합니다. 모든 온라인 강의가 인정되는 것은 아닙니다.',sourceText:'2026.1 업무매뉴얼 인쇄쪽 197쪽 · 현행 기준 대조 필요'},
+ menu('수료증은 교육 운영기관에서 받으세요.','학습 사이트의 수료·증명서 안내를 확인하고, 없으면 운영기관 담당자에게 발급을 요청하세요.',['해당 교육기관·학습 사이트','수료 여부 확인','수료증 발급 또는 기관 요청'],{copy:'국민취업지원제도 제출용으로 [과정명] 수료 자료가 필요합니다. 제 이름, 과정명, 총 훈련시간과 실제 수료일이 확인되는 자료 발급 방법을 알려주세요.',note:'운영기관마다 메뉴가 다르므로 확인되지 않은 공통 메뉴를 가정하지 않습니다.'}),
+ doc('수료일과 총 훈련시간을 확인하세요.','수료일이 이번 회차 활동기간에 들어가는지 확인하세요.','원격훈련 수료 자료 예시',[['이름','홍길동'],['과정명','본인이 수강한 과정'],['총 훈련시간','해당 과정의 총시간'],['수료일','실제 수료한 날짜'],['발급기관','훈련 운영기관']]),attach(),ready()]},
+ exam:{icon:'◇',name:'자격증 시험 증빙',sub:'시험기관 선택 → 응시확인서',group:'교육',slides:[
+ {title:'시험 접수와 실제 응시는 달라요.',caption:'시험을 실제로 본 사실을 확인할 자료를 준비하세요.',tiles:[['접수증','접수했다는 자료'],['수험표','응시 예정 정보'],['응시확인서','실제 응시 확인']],note:'구직에 필요한 시험인지, 본인 취업활동계획에 반영되었는지 먼저 확인하세요. 접수·응시·합격·자격취득은 서로 다릅니다.',sourceText:'2026.1 업무매뉴얼 인쇄쪽 200쪽'},
+ {title:'어디에서 시험을 보셨나요?',caption:'시험 주관기관에 맞는 발급 방법을 선택하세요.',choices:[['qnet','Q-Net 국가자격시험','확인서 발급 메뉴'],['chamber','대한상공회의소 시험','PC 접수내역에서 출력'],['otherexam','그 외 시험기관','응시 증명 요청']]}
+ ]},
+ qnet:{icon:'Q',name:'Q-Net 응시확인',sub:'시험별 발급 가능 시점 확인',group:'교육',slides:[
+ menu('Q-Net에 로그인하고 확인서 메뉴를 찾으세요.','본인 시험의 홈페이지에서 확인서 발급 안내를 확인하세요.',['Q-Net 로그인','확인서 발급','확인서 발급 신청','시험응시확인서'],{action:VS.qnet,actionText:'Q-Net 열기',source:VS.qfaq,note:'연결된 공식 FAQ는 경비지도사 기준으로 시험시행일부터 10일 후 발급을 안내합니다. 이 시점을 모든 Q-Net 시험에 공통 적용하지 마세요.'}),
+ doc('접수확인서가 아닌지 확인하세요.','시험명·응시일·본인 정보와 실제 응시를 확인하는 내용이 있는지 살펴보세요.','시험응시확인서 예시',[['이름','홍길동'],['시험명','실제 응시한 시험'],['시험일','실제 응시 날짜'],['확인내용','시험 응시 사실'],['발급기관','시험 주관기관']],{note:'발급 가능 시점이 지정일 이후라면 미리 상담사에게 대체 자료와 보완 방법을 문의하세요.'}),attach(),ready()]},
+ chamber:{icon:'K',name:'상공회의소 응시확인',sub:'종목·검정 방식별 발급 시점 확인',group:'교육',slides:[
+ menu('PC에서 마이페이지의 접수내역을 여세요.','대한상공회의소 자격평가사업단에 로그인한 뒤 해당 시험의 응시확인서 출력 버튼을 확인하세요.',['PC에서 자격평가사업단 접속','로그인 → 마이페이지','접수내역','응시확인서 출력'],{action:'https://license.korcham.net/',actionText:'자격평가사업단 열기',source:VS.chamber}),
+ {title:'시험 종류에 따라 출력 시점이 달라요.',caption:'공식 FAQ의 응시확인서 출력 안내입니다.',tiles:[['상시검정','응시 다음 날부터'],['정기 필기','시험일 기준 2주 후'],['정기 실기','합격자 발표일 이후']],note:'공식 FAQ는 접수일 기준 12개월 동안 출력할 수 있다고 안내합니다. 실제 발급 가능 여부는 본인 접수내역에서 확인하세요.',source:VS.chamber},
+ doc('응시한 시험과 날짜가 맞는지 확인하세요.','출력한 서류를 저장하고 내용을 확인하세요.','시험응시확인서 예시',[['이름','홍길동'],['시험종목','본인 응시 종목'],['시험구분','필기 또는 실기'],['응시일','시험을 본 날짜'],['확인내용','실제 응시 사실']]),attach(),ready()]},
+ otherexam:{icon:'◇',name:'다른 시험기관',sub:'발급기관에 실제 응시 자료 요청',group:'교육',slides:[menu('시험 주관기관에 발급을 문의하세요.','응시확인서가 없다면 실제 응시가 확인되는 대체 자료를 상담사와 확인하세요.',['시험 주관기관 고객센터','응시 사실 증명 발급 문의','자료 확보 → 상담사 확인'],{copy:'[시험명]에 [응시일] 응시했습니다. 국민취업지원제도 구직활동 증빙에 사용할 응시확인서를 발급받고 싶습니다. 발급 메뉴, 발급 가능한 날짜와 저장 방법을 알려주세요.',note:'성적표·합격증·결제 영수증이 언제나 응시확인서를 대신한다고 판단하지 마세요.'}),attach(),ready()]},
+ saramin:{icon:'S',name:'사람인 지원 증빙',sub:'PC 파일 저장 / 앱 이메일 전송',group:'지원',slides:[
+ menu('먼저, 어디에서 지원했는지 확인하세요.','사람인 내부 지원과 기업 홈페이지 지원은 증빙 발급처가 다릅니다.',['사람인 내부 지원 → 사람인 지원내역','기업 홈페이지 지원 → 해당 기업 사이트'],{action:'https://www.saramin.co.kr/',actionText:'사람인 열기',source:VS.saramin}),
+ menu('PC에서는 지원내역의 확인서를 찾으세요.','기간·기업을 조회하고 필요한 지원 건의 파일을 받으세요.',['로그인 → MY 홈','지원 내역','구직활동 확인서','기간·기업 설정 → 파일 다운로드'],{source:VS.saramin}),
+ menu('앱에서는 이메일로 전송하세요.','전송받은 이메일의 첨부파일을 열고 휴대폰에 저장하세요.',['MY 홈 → 입사지원 관리','구직활동 확인서','지원 건 선택 → 이메일 전송','이메일 첨부파일 내려받기'],{source:VS.saramin,note:'공식 도움말 기준입니다. 앱 버전에 따라 표시가 다를 수 있습니다.'}),
+ doc('지원 날짜와 회사를 확인하세요.','이번 회차 내역인지 확인하고 공고 자료도 함께 보관하세요.','구직활동 확인서 예시',[['지원자','홍길동'],['지원일','실제 지원한 날짜'],['지원기업','입사지원한 기업'],['모집내용','지원한 직무·공고'],['지원상태','실제 지원 완료']],{note:'공고 삭제·외부 홈페이지 지원 등으로 확인서가 안 나오면 기업이나 사이트 고객센터에 문의하세요. 필요한 서류 조합은 상담사 안내를 확인하세요.'}),attach(),ready()]},
+ job:{icon:'J',name:'잡코리아 지원 증빙',sub:'즉시지원 내역 → 취업활동 증명서',group:'지원',slides:[
+ menu('즉시지원으로 지원했는지 확인하세요.','기업 홈페이지 지원은 잡코리아가 아니라 기업 사이트에서 완료 자료를 찾아야 합니다.',['잡코리아 즉시지원 → 잡코리아 증명서','기업 홈페이지 지원 → 기업 접수내역'],{action:'https://www.jobkorea.co.kr/',actionText:'잡코리아 열기',source:VS.job}),
+ menu('PC에서 취업활동 증명서를 여세요.','지원한 내역을 선택하고 증명서 발급 안내에 따라 저장하세요.',['로그인 → 개인회원 홈','입사지원·제안 관리','취업활동 증명서'],{source:VS.job}),
+ menu('앱에서는 전체 메뉴를 확인하세요.','공식 FAQ의 앱 경로입니다. 메뉴가 다르면 PC 경로 또는 고객센터를 이용하세요.',['로그인','전체 메뉴','취업활동증명서'],{source:VS.job,note:'FAQ 기준 최근 90일 이내 즉시지원 내역만 발급 가능합니다. 취소하거나 삭제한 지원은 발급되지 않을 수 있습니다.'}),
+ doc('지원 건을 확인하고 저장하세요.','현재 회차 활동과 동일한 회사·지원일인지 확인하세요.','취업활동 증명서 예시',[['이름','홍길동'],['지원일','실제 지원 날짜'],['기업명','지원한 기업'],['공고명','지원 직무'],['내역','입사지원 완료']],{source:VS.job}),attach(),ready()]},
+ external:{icon:'@',name:'기업 홈페이지·이메일',sub:'공고와 실제 지원 완료 자료 확인',group:'지원',slides:[
+ {title:'지원 방식에 맞는 자료를 모으세요.',caption:'공고를 본 사실과 실제 제출한 사실을 구분하세요.',tiles:[['기업 홈페이지','본인 접수·지원 완료 내역'],['이메일 지원','실제 발송 내역·첨부 확인'],['방문·우편','기업 접수 확인 자료 등']],note:'자료 조합과 대체 자료의 인정 여부는 담당 상담사에게 확인하세요. 공고 캡처만으로 지원 사실이 입증되는 것은 아닙니다.'},
+ doc('공고와 지원 완료 자료를 대조하세요.','누가·언제·어느 기업의 어떤 직무에 지원했는지가 확인되게 준비하세요.','지원 완료 자료 확인 예시',[['지원자','본인 정보'],['지원 기업','공고와 같은 기업'],['지원일','이번 회차 활동기간 내 날짜'],['직무·공고','본인 희망 취업 분야와 관련'],['접수·발송','실제 제출 완료 내용']],{note:'이메일 제목만 보이는 화면 등으로 사실 확인이 어려우면 추가 자료가 필요할 수 있습니다.'}),attach(),ready()]},
+ interview:{icon:'◎',name:'면접 증빙',sub:'참여 전 준비 → 기업 확인 → 첨부',group:'면접',slides:[
+ menu('면접 전에 확인서를 준비하세요.','상담사에게 기관에서 사용하는 양식과 필요한 확인 항목을 물어보세요.',['상담사에게 면접 증빙 확인','필요한 확인서 준비','면접 후 기업 담당자 확인'],{copy:'[기업명] 면접이 [날짜]에 예정되어 있습니다. 국민취업지원제도 구직활동 증빙으로 필요한 면접확인서 양식과 확인받을 항목을 알려주세요.'}),
+ doc('실제 면접 참여가 확인되어야 해요.','면접 안내 문자와 실제 면접에 참석했다는 자료를 구분하세요.','면접 참여 확인 자료 예시',[['이름','홍길동'],['면접기업','실제 면접을 본 기업'],['면접일','실제 참여한 날짜'],['모집직무','면접 대상 직무'],['기업 확인','담당기관 요구 방식 확인']],{note:'이 예시는 공식 서식이 아닙니다. 기업 확인 방식·서명 등은 기관에서 안내한 양식을 따르세요.'}),attach(),ready()]}
+};
+visualRoutes.program={icon:'▤',name:'취업 프로그램 증빙',sub:'참여·수료 확인자료 준비',group:'교육',slides:[menu('계획에 반영된 프로그램인지 확인하세요.','참여 전 담당 상담사와 활동 인정 조건을 확인하세요.',['상담사와 프로그램 협의','고용24·운영기관에서 신청','정해진 참여·수료 요건 이행'],{action:VS.program,actionText:'공식 프로그램 안내',note:'취업특강·집단상담 등은 인정 방식과 횟수 제한이 다릅니다. 아무 교육이나 동일하게 인정되는 것은 아닙니다.'}),menu('참여확인서는 운영기관에 요청하세요.','온라인 수료증 발급 메뉴가 없다면 담당자에게 문의하세요.',['프로그램 운영기관','참여·수료 확인 요청','본인 정보·활동일 확인'],{copy:'[프로그램명]에 [날짜 또는 기간] 참여했습니다. 국민취업지원제도 제출용으로 제 이름, 프로그램명, 실제 참여일 또는 수료일을 확인할 수 있는 자료 발급 방법을 알려주세요.'}),doc('이름과 실제 참여일을 확인하세요.','접수만 한 내역과 실제 참여·수료 자료를 구분하세요.','프로그램 참여 자료 예시',[['이름','홍길동'],['프로그램','실제 참여한 프로그램명'],['참여기간','실제 참여일 또는 수료일'],['참여내용','출석·수료 여부'],['발급기관','실제 운영기관']]),attach(),ready()]};
+const topRoutes=['apply','training','exam','saramin','job','external','interview'];
+const section=document.createElement('section');section.id='visual';section.innerHTML=`<div class="section-title"><div><span class="eyebrow">화면으로 따라 하기</span><h2>지금 필요한 것을 골라주세요.</h2><p>한 번에 한 단계씩. 화면과 서류 예시를 보면서 준비해요.</p></div></div><div class="visual-route-list">${topRoutes.map(id=>`<button class="route-choice" data-route="${id}"><span class="choice-icon">${visualRoutes[id].icon}</span><b>${visualRoutes[id].name}</b><small>${visualRoutes[id].sub}</small><span class="choice-arrow">→</span></button>`).join('')}</div><div id="visualPlayer" class="visual-player" tabindex="-1" aria-label="활동별 단계 안내"></div>`;
+document.querySelector('.scope').after(section);
+document.querySelector('.guide-section').hidden=true;
+document.querySelector('#start').href='#visual';document.querySelector('#start').textContent='화면 보면서 시작하기 ↗';document.querySelector('nav a').href='#visual';
+document.querySelector('.hero h1').innerHTML='읽는 대신,<br>보면서 따라 해요.';
+document.querySelector('.hero p').innerHTML='누를 곳은 화면으로, 필요한 서류는 예시로.<br>내 활동에 맞는 안내를 골라 하나씩 준비하세요.';
+document.querySelector('.hero-note').textContent='수당 신청은 공식 PC 화면 기준 · 훈련·시험·입사지원 증빙 안내 포함';
+document.querySelector('.journey').innerHTML='<div class="journey-top"><span>이제는, 이렇게 보여드려요</span><span class="pill">VISUAL GUIDE</span></div><img class="hero-screen" src="assets/work24-7.png" alt="고용24 공식 안내 이미지: 첨부파일 등록 버튼을 강조한 화면"><div class="journey-bottom">실제 공식 안내 화면 · 누를 곳을 보고 한 단계씩</div>';
+document.querySelector('.scope span').textContent='검토용 안내입니다. 실제 신청은 고용24에서 진행합니다. 본인 취업활동계획과 기관 안내를 함께 확인하세요. 공식 PC 이미지와 직접 만든 설명·서류 예시는 구분해 표시했습니다.';
+document.querySelector('#sources>p').textContent='자료 확인일 2026.11.11 · 2026.1 업무매뉴얼과 공식 이용안내를 참고했습니다. 고용24 화면 이미지는 고용24 PC 이용가이드의 예시 화면이며, 날짜·금액은 본인 정보가 아닙니다. 화면·규정 변경 및 모바일 차이는 추가 검증이 필요합니다. 2027년 기준은 미반영입니다.';
+let vr='apply',vi=0;const player=document.querySelector('#visualPlayer');
+function setRoute(id,scroll=true){vr=id;vi=0;renderVisual();if(scroll)player.scrollIntoView({behavior:'instant',block:'start'})}
+function renderVisual(){const r=visualRoutes[vr],s=r.slides[vi];document.querySelectorAll('[data-route]').forEach(b=>{b.classList.toggle('selected',b.dataset.route===vr);b.setAttribute('aria-pressed',String(b.dataset.route===vr))});let figure='';
+ if(s.img)figure=`<figure class="official-figure"><button class="image-zoom" data-zoom="${s.img}" aria-label="${s.title} 공식 화면 크게 보기"><img src="${s.img}" alt="고용24 공식 PC 화면: ${s.title}"></button><figcaption>고용24 공식 PC 안내 화면 · 누르면 크게 볼 수 있어요</figcaption></figure>`;
+ if(s.path)figure=`<div class="menu-figure"><span class="figure-label">메뉴 순서 설명도 · 실제 화면 캡처가 아닙니다</span>${s.path.map((p,i)=>`<div class="menu-node"><b>${i+1}</b><span>${p}</span></div>${i<s.path.length-1?'<div class="menu-down">↓</div>':''}`).join('')}</div>`;
+ if(s.docTitle)figure=`<div class="document-figure"><span class="figure-label">내용 확인용 예시 · 공식 서식이나 실제 증빙이 아닙니다</span><div class="sample-sheet"><div class="watermark">예시</div><h4>${s.docTitle}</h4>${s.fields.map((f,i)=>`<div class="sample-field"><span class="field-number">${i+1}</span><b>${f[0]}</b><span>${f[1]}</span></div>`).join('')}<p>실제 발급 문서에서 위 정보를 확인하세요.</p></div></div>`;
+ if(s.tiles)figure=`<div class="concept-figure">${s.tiles.map((t,i)=>`<div class="concept-tile"><span>${String(i+1).padStart(2,'0')}</span><b>${t[0]}</b><p>${t[1]}</p></div>`).join('')}</div>`;
+ if(s.choices)figure=`<div class="branch-choices">${s.choices.map(c=>`<button data-branch="${c[0]}"><span>${c[1]}</span><small>${c[2]}</small><b>→</b></button>`).join('')}</div>`;
+ if(s.checks)figure=`<div class="visual-checks">${s.checks.map(t=>`<label><input type="checkbox">${t}</label>`).join('')}</div>`;
+ player.innerHTML=`<div class="player-top"><span>${r.name}</span><span>${vi+1} / ${r.slides.length}</span></div><div class="visual-progress"><span style="width:${(vi+1)/r.slides.length*100}%"></span></div><div class="player-body"><span class="tag">지금 할 일 ${String(vi+1).padStart(2,'0')}</span><h3>${s.title}</h3><p class="action-caption">${s.caption}</p>${figure}${s.check?`<div class="visual-success">✓ <span>${s.check}</span></div>`:''}${s.copy?`<div class="request-box"><b>이렇게 요청하면 돼요</b><p id="requestText">${s.copy}</p><button id="copyRequest" class="secondary">요청문 복사</button><span id="copyStatus" role="status"></span></div>`:''}${s.note?`<details class="visual-note"><summary>이 단계에서 주의할 점</summary><p>${s.note}</p></details>`:''}${s.sourceText?`<p class="source-note">근거: ${s.sourceText}</p>`:''}${s.source?`<a class="source-link" href="${s.source}" target="_blank" rel="noopener noreferrer">공식 출처 확인 ↗</a>`:''}${s.action?`<a class="primary external-action" href="${s.action}" target="_blank" rel="noopener noreferrer">${s.actionText} ↗</a>`:''}</div><div class="player-controls"><button class="secondary" id="visualPrev" ${vi===0?'disabled':''}>← 이전</button><div>${s.jump?`<button class="primary" data-branch="${s.jump}">수당 신청 화면으로 →</button>`:vi<r.slides.length-1?'<button class="primary" id="visualNext">다음 화면 →</button>':`<button class="primary" id="visualDone">${vr==='apply'?'신청 준비 체크하기 ✓':'활동 목록으로 ↑'}</button>`}</div></div><p class="player-bottom">이 페이지의 다음 버튼은 고용24에 실제 제출하지 않습니다.</p>`;
+ document.querySelector('#visualPrev').onclick=()=>{if(vi>0){vi--;renderVisual();player.scrollIntoView({behavior:'instant',block:'start'});player.focus({preventScroll:true})}};const next=document.querySelector('#visualNext');if(next)next.onclick=()=>{vi++;renderVisual();player.scrollIntoView({behavior:'instant',block:'start'});player.focus({preventScroll:true})};const done=document.querySelector('#visualDone');if(done)done.onclick=()=>{if(vr==='apply'){player.insertAdjacentHTML('beforeend','<div class="visual-success">✓ 안내를 끝까지 보셨어요. 실제 제출 결과는 고용24에서 확인하세요.</div>')}else section.scrollIntoView({behavior:'smooth'})};
+ const copy=document.querySelector('#copyRequest');if(copy)copy.onclick=async()=>{try{await navigator.clipboard.writeText(s.copy);document.querySelector('#copyStatus').textContent='복사했어요. 날짜·과정명 등을 바꿔서 사용하세요.'}catch{document.querySelector('#copyStatus').textContent='요청문을 길게 누르거나 선택해서 복사해 주세요.'}};
+}
+section.addEventListener('click',e=>{const r=e.target.closest('[data-route],[data-branch]');if(r)setRoute(r.dataset.route||r.dataset.branch);const z=e.target.closest('[data-zoom]');if(z)openZoom(z.dataset.zoom)});
+const zoom=document.createElement('dialog');zoom.id='imageDialog';zoom.setAttribute('aria-label','공식 화면 확대');zoom.innerHTML='<button class="close" aria-label="확대 화면 닫기">×</button><p>공식 PC 안내 화면 · 좌우로 움직이며 볼 수 있어요</p><div class="zoom-scroll"><img alt="고용24 공식 안내 화면 확대"></div>';document.body.append(zoom);zoom.querySelector('button').onclick=()=>zoom.close();function openZoom(src){zoom.querySelector('img').src=src;zoom.showModal()}
+renderVisual();
+const recognition=document.createElement('section');recognition.id='recognition';recognition.innerHTML=`<div class="section-title"><div><span class="eyebrow">지원하기 전에 확인</span><h2>이 입사지원, 구직활동으로 인정될까요?</h2><p>활동기간 안의 실제 지원인지, 본인 계획과 맞는지부터 확인해요.</p></div></div><div class="recognition-grid"><div class="recognition-box yes"><h3>✓ 먼저 확인할 것</h3><div>희망 직종·직무와 관련된 실제 구인</div><div>모집기간 안에 실제 입사지원·면접</div><div>이번 회차 활동기간과 맞는 날짜</div><div>본인 IAP에 정한 활동과 이행 요건</div></div><div class="recognition-box no"><h3>× 이것만으로는 부족해요</h3><div>공고 보기·스크랩·이력서 등록만 함</div><div>마감된 공고에 형식적으로 지원</div><div>전화 문의만 하거나 명함만 제출</div><div>지원·면접하지 않고 했다고 신고</div></div></div><details><summary>같은 회사에 반복 지원하거나 지원 후 면접도 봤어요.</summary><p>2026.1 매뉴얼은 정당한 사유 없는 동일 사업장 반복지원 등을 형식적 활동 사례로 제시합니다. 같은 날 여러 건 지원, 같은 기업의 지원과 면접을 각각 몇 회로 산정하는지는 본인 상황과 공식 기준을 확인해야 합니다. 무조건 각각 인정되거나 모두 불인정된다고 단정하지 마세요.</p></details><p class="source-note">근거: 2026.1 업무매뉴얼 인쇄쪽 199·214쪽. 현재 규정과 개인별 계획에 따른 최종 확인이 필요합니다.</p></section>`;document.querySelector('#activities').before(recognition);
+// Route the old activity cards into the visual walkthrough instead of a text modal.
+document.querySelector('#activityGrid').onclick=e=>{const b=e.target.closest('[data-activity]');if(!b)return;const map=['apply','saramin','job','interview','program','exam'];setRoute(map[Number(b.dataset.activity)])};
+document.querySelector('#start').onclick=e=>{e.preventDefault();setRoute('apply')};
+
+document.querySelector('#sources>p:last-child').textContent='고용24 공식 PC 안내 이미지를 출처와 함께 사용했습니다. 메뉴 순서 설명도와 서류 예시는 실제 화면·공식 서식과 구분해 표시했습니다.';
