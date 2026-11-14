@@ -1,0 +1,52 @@
+/* Readable phone layout, shared across questions and step-by-step guides. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,svg{max-width:100%}.more-questions{display:block;width:100%;margin:18px 0;justify-content:center;text-align:center}
+.zoom-actions{display:flex;gap:10px;margin:12px}.zoom-actions button{min-height:44px}.zoom-actions [aria-pressed=true]{background:#dcebdc;border-color:#527a56}
+#imageDialog .zoom-scroll img{width:100%;max-width:100%;height:auto}
+#imageDialog .zoom-scroll.zoom-original img{width:1600px;max-width:none}
+#imageDialog{max-height:94dvh}#imageDialog .close{position:absolute;right:10px;top:8px;min-width:44px;min-height:44px;background:#fff;z-index:2}
+.answer-card .answer-detail{padding:16px 0}.ev-source{padding:12px 0}
+@media(max-width:650px){
+ body{font-size:16px;overflow-wrap:anywhere}main{padding-left:16px;padding-right:16px}
+ body header,body.faq-mode header{height:auto;min-height:112px;padding:10px 16px;display:flex;flex-wrap:wrap;gap:5px 10px}
+ header .brand{font-size:20px!important}.brand-sub,header .edition{display:none}
+ header nav,body.faq-mode header nav{width:100%;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px}
+ body header nav .mode-button,body.faq-mode header nav .mode-button{font-size:13px;padding:9px 3px;min-height:44px;line-height:1.4;white-space:normal}
+ header nav .nav-optional{display:none}
+ body.faq-mode main{padding:0 16px 26px}.help-intro{grid-template-columns:1fr;padding:26px 0 16px}.intro-visual{display:none}
+ .help-intro h1{font-size:31px}.help-intro .eyebrow{font-size:12px}.help-intro p{font-size:16px;line-height:1.8}
+ .faq-search-box input,#faqTool input,input[type=date],select,textarea{font-size:16px!important;min-height:46px}
+ .faq-search-box{min-height:52px}.faq-search-box button{min-width:44px;min-height:44px}
+ .topic-card{padding:17px 14px;min-height:151px}.topic-card>b{font-size:17px}.topic-card>small{font-size:13px;line-height:1.7}
+ .help-section-head h2{font-size:21px}.help-section-head>span{font-size:12px}.small-text{font-size:14px;min-height:44px}
+ .quick-question,.question-row{min-height:60px;padding:16px 12px}.quick-question b,.question-row b{font-size:16px;line-height:1.7}.question-row small{font-size:13px;line-height:1.7}
+ .result-count{font-size:14px}.q-mark{flex-shrink:0}.help-tools summary{font-size:15px;padding:14px 0;min-height:48px}
+ .help-sources-note p,.help-sources-note b{font-size:14px}.help-bottom-actions{padding:8px 12px max(8px,env(safe-area-inset-bottom));gap:8px}.help-bottom-actions>a,.help-bottom-actions>button{font-size:14px;min-height:46px;padding:10px}
+ .checklist-banner b{font-size:16px;line-height:1.6}.checklist-banner small{font-size:13px;line-height:1.7}
+ .answer-top{gap:12px}.back-help{font-size:15px;min-height:44px;display:inline-flex;align-items:center}.answer-top>span{font-size:12px;max-width:45%}
+ .answer-card{padding:23px 18px}.answer-card h1{font-size:27px;line-height:1.55}.short-answer{font-size:17px!important;line-height:1.9}
+ .answer-step>p{font-size:16px;line-height:1.85}.answer-steps h2{font-size:20px}.answer-steps{padding:22px 0 12px}
+ .avoid-mistake{padding:17px 13px}.avoid-mistake b{font-size:15px}.avoid-mistake p{font-size:15px;line-height:1.85}.confirm-note{font-size:14px;line-height:1.8}
+ .answer-detail summary,.ev-source summary,.ev-index summary{font-size:15px;min-height:48px;display:flex;align-items:center;cursor:pointer}
+ .answer-detail p,.answer-detail a,.answer-detail .ask-template{font-size:15px;line-height:1.85}.answer-detail a{display:block;padding:12px 0;overflow-wrap:anywhere}
+ .answer-compare span,.answer-compare small{font-size:13px}.answer-compare b{font-size:16px}.mini-document>span{font-size:12px}.mini-document>div{font-size:14px}.mini-document>div>span{font-size:12px}
+ .proof-branches>div>span,.date-meaning span{font-size:14px}.proof-branches b,.date-meaning b{font-size:16px}.action-path b{font-size:16px;line-height:1.8}
+ .guide-answer-button b{font-size:16px}.guide-answer-button small{font-size:13px;line-height:1.7}.ev-answer-link{font-size:17px;line-height:1.7}.ev-answer-link small{font-size:14px}
+ .final-check{padding:16px 13px}.final-check label{font-size:16px;line-height:1.8}.final-check>a{font-size:14px;min-height:44px;padding-top:10px}.final-check input{width:24px;height:24px}
+ .ev-home-start{padding:22px 18px}.ev-home-start b{font-size:20px}.ev-home-start small{font-size:14px}
+ .ev-grid{grid-template-columns:1fr;gap:12px}.ev-card{padding:20px 18px;grid-template-columns:32px 1fr;gap:7px 12px}.ev-card b{font-size:18px}.ev-card>small{font-size:14px;padding-right:12px}.ev-card>span{font-size:25px}
+ .ev-body{padding:23px 18px}.ev-body h1{font-size:26px;line-height:1.55}.ev-lead{font-size:17px;line-height:1.9}.tag,article .tag{font-size:12px}
+ .ev-heading{font-size:14px;padding:17px}.ev-heading>b{white-space:nowrap}.ev-menu b{font-size:16px}.ev-menu>small{font-size:12px}.ev-files b{font-size:15px}.ev-files small{font-size:14px}
+ .ev-player{overflow:visible}.ev-heading{border-radius:18px 18px 0 0}.ev-controls{position:sticky;bottom:0;z-index:2;background:#fffef9;padding:12px 14px max(12px,env(safe-area-inset-bottom));box-shadow:0 -4px 16px #24472a14;gap:10px;border-radius:0 0 18px 18px}
+ .ev-controls a{flex:1;justify-content:center;min-height:50px;font-size:16px;padding:12px 10px;gap:8px}.ev-index>a{font-size:15px;min-height:48px}.ev-quick{font-size:15px;gap:20px}.ev-quick a{padding:12px 0}
+ .ev-source,.source-note{font-size:13px;line-height:1.8}.ev-source a{font-size:15px;display:block;padding:12px 0}.player-bottom{font-size:13px;line-height:1.7;padding:12px 18px}
+ .request-box{padding:17px}.request-box>b{font-size:15px}.request-box p{font-size:16px;line-height:1.85}.request-box button{font-size:15px;min-height:46px}.request-box>span{font-size:14px}
+ .income-figure>b{font-size:16px}.income-figure figcaption,.real-screen figcaption,.real-screen>a{font-size:13px}.income-example>b{font-size:14px}.income-example span{font-size:14px}.income-example strong{font-size:16px}
+ .answer-image figcaption,.official-figure figcaption{font-size:13px;line-height:1.7}.answer-image button{width:100%}
+ .answer-detail section,.answer-card>section{padding-top:16px;padding-bottom:16px}
+ #imageDialog{width:calc(100% - 16px);padding:52px 8px 12px}#imageDialog>p{font-size:14px}.zoom-actions{gap:8px;margin:10px 4px}.zoom-actions button{flex:1;padding:10px;font-size:14px}.zoom-scroll{max-height:68dvh}
+ .primary,.secondary{font-size:16px;min-height:46px}#faqTool p,#faqTool label{font-size:16px}#faqTool h2{font-size:24px}
+ .question-section{scroll-margin-top:126px}.visual-player{scroll-margin-top:126px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
