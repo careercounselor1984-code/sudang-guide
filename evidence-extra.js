@@ -20,6 +20,34 @@ g.cyber.steps[4].text='마이페이지 → 수료이력조회에서 수강한 �
 g.cyber.steps[4].pictures=[picture('cyber-menu.png','④ 수료이력조회를 눌러요','마이페이지 → 수료이력조회. 수강한 계정과 교육연도를 확인한 후 해당 과정을 찾으세요.','https://www.work.go.kr/cyberedu/cyb/sitemap/information/site/retrieveInformationSiteDetail.do')];
 g.cyber.steps[5].pictures=[picture('cyber-certificate-2.png','수료증의 소속은 이렇게 확인해요','사이버진로교육센터 공식 FAQ 안내 이미지 · 로그인 후 발급 화면 캡처가 아닙니다.',faqBase+'39760'),picture('cyber-certificate-5.png','소속이 다르게 나올 때','공식 FAQ는 소속없음으로 인쇄해도 무방하다고 안내합니다. 소속을 바꾸려고 임의로 수강·수료를 취소하기 전에 센터에 문의하세요.',faqBase+'39760')];
 g.cyber.steps[5].branches.push({id:'cyberhelp',label:'수료증·진도율·저장 오류 해결하기'});
+const completionUrl='https://www.work.go.kr/cyberedu/cyb/mypage/course/complete/retrieveCourseCompleteList.do';
+g.cyber.steps[4].text='마이페이지 → 수료이력조회에서 교육년도·과정명을 확인하세요. 수료한 과정의 수료증발급 칸에 인쇄·저장 버튼이 있습니다.';
+g.cyber.steps[4].path=['교육년도: 수강한 연도 또는 전체','과정명·수료 상태 확인','수료증발급 칸 → 저장'];
+g.cyber.steps[4].warning='2026.11.21 로그인 후 실제 버튼 확인. 수료취소하기는 증빙을 받는 버튼이 아닙니다. 신청완료·수강중 화면을 수료증으로 제출하지 마세요.';
+g.cyber.steps[5].title='소속 선택 창에서 다시 저장을 눌러요.';
+g.cyber.steps[5].text='목록의 저장을 누르면 수료증 소속선택 창이 열립니다. 표시된 소속 또는 소속없음을 확인한 후 창 안의 저장을 누르세요.';
+g.cyber.steps[5].path=['목록의 저장','수료증 소속선택 창','표시된 소속 또는 소속없음 확인','창 안의 저장'];
+g.cyber.steps[5].warning='소속을 바꾸려고 수료를 임의로 취소하지 마세요. 최초 출력 이후 소속변경 버튼이 없어질 수 있습니다. 수정이 꼭 필요하면 센터에 문의합니다.';
+g.cyber.steps.splice(6,0,
+ {title:'수료증 뷰어가 열리면 내용을 확인해요.',text:'이번 확인에서는 저장 뒤 Crownix 수료증 뷰어가 열렸습니다. 이름·과정명·교육시간·수료일을 확인하고, 출력이 필요하면 위쪽 프린터 모양의 인쇄를 누르세요.',path:['새 창의 수료증 내용 확인','수료일과 발급일 구분','뷰어 위쪽 프린터 모양 → 인쇄'],warning:'조회한 과정을 다시 발급해도 수료일이 오늘로 바뀌는 것은 아닙니다. 발급일만 보고 이번 회차 활동으로 판단하지 마세요.'},
+ {title:'최종 파일을 열어본 뒤 제출해요.',text:'PC에 저장·실행하여 출력하라는 안내가 나오면 센터의 공식 출력 절차를 확인하세요. 휴대폰에서 진행이 안 되면 PC를 이용하거나 센터에 파일 발급 방법을 문의합니다.',path:['센터 안내에 맞게 최종 문서 받기','실제 PDF·문서가 열리는지 확인','이름·과정·교육시간·수료일 확인','고용24 첨부 후 제출 상태 확인'],warning:'저장 버튼을 누른 사실만으로 PDF 파일 확보나 고용24 제출이 완료된 것은 아닙니다. 실행용 파일·웹주소를 증빙 PDF 대신 첨부하지 마세요. 이 환경에서는 뷰어와 증명서 생성 완료 안내까지 확인했으며 최종 파일 다운로드·실행·PDF 변환은 확인하지 못했습니다.',branches:[{id:'filehelp',label:'파일 찾기와 첨부 전 점검'},{id:'cyberhelp',label:'수료증 저장·출력 오류 안내'}]}
+);
+delete g.cyber.steps[5].file;
+g.cyber.steps[5].branches=g.cyber.steps[5].branches.filter(b=>b.id!=='pdf');
+for(const s of g.cyber.steps.slice(4,7))s.basis='사이버진로교육센터 로그인 후 실제 화면 2026.11.21 확인';
+g.cyber.steps[7].basis='2026.11.21 뷰어·증명서 생성 완료 안내까지 확인. 최종 파일 다운로드·실행·PDF 변환은 미확인';
+g.cyber.steps[7].warning='저장 버튼을 누른 사실만으로 파일 확보나 고용24 제출이 완료된 것은 아닙니다. 실행용 파일·웹주소를 증빙 PDF 대신 첨부하지 마세요.';
+const cyberQuestion=window.FAQ_DATA.find(q=>q.id==='Q54');
+cyberQuestion.answer='한국고용정보원 사이버진로교육센터에서 수강·수료한 뒤 마이페이지 → 수료이력조회로 갑니다. 해당 과정의 저장 → 소속 확인 → 저장 순서로 진행하세요.';
+cyberQuestion.warning='온라인 강의를 아무거나 듣는다고 모두 인정되지 않습니다. 저장 뒤 뷰어가 열릴 수 있으므로 실제 제출할 문서 파일까지 확보했는지 확인하세요.';
+cyberQuestion.basis='O20·M01 198 / 발급 버튼 2026.11.21 실제 확인·활동 인정 조건은 개별 확인';
+const historyQuestion=window.FAQ_DATA.find(q=>q.id==='Q92');
+historyQuestion.answer='완료한 과정의 수료증은 마이페이지 → 수료이력조회에서 찾습니다. 해당 과정의 수료증발급 칸에 인쇄·저장 버튼이 있습니다.';
+historyQuestion.actions=['교육년도·과정명과 수료 상태 확인','수료증발급 칸의 저장 누르기','소속 선택 창에서 소속 확인 후 다시 저장'];
+historyQuestion.warning='수료취소하기는 증빙을 받는 버튼이 아닙니다. 파일을 받으려다가 수료를 취소하지 마세요. 미수료·미발급 과정과 새 창 차단을 구분합니다.';
+historyQuestion.basis='O20 / 로그인 후 수료이력·저장창 2026.11.21 실제 확인';
+historyQuestion.needsConfirm=false;
+window.FAQ_DATA.push({id:'Q103',question:'수료증 저장을 눌렀는데 파일 대신 뷰어가 열려요.',category:'learn',answer:'저장 뒤 수료증 뷰어가 열릴 수 있습니다. 문서 내용을 확인하고, 출력이 필요하면 뷰어 위쪽 프린터 모양의 인쇄를 누르세요.',actions:['뷰어의 본인 이름·과정·교육시간·수료일 확인','위쪽 프린터 모양 인쇄 버튼 확인','PC 출력 안내를 따라 최종 문서 파일을 확보한 뒤 열어보기'],warning:'PC에 저장·실행하라는 안내가 나오면 센터의 공식 출력 절차를 확인하세요. 실행용 파일이나 웹주소를 고용24 증빙 PDF 대신 첨부하지 마세요.',basis:'O20 / 뷰어·증명서 생성 완료 안내 2026.11.21 확인. 최종 다운로드·실행·PDF 변환 미확인',needsConfirm:false,evidence:'cyber',route:null,image:null,visual:''});
 const sample=(title,fields,note)=>({title,fields,note});
 const hrdSource='https://play.google.com/store/apps/details?id=kr.go.hrd.app&hl=ko';
 g.training.steps[3].pictures=[picture('hrd-home.webp','공식 앱: QR코드·비콘·신호 중 기관이 안내한 방식을 눌러요','한국고용정보원이 공식 Google Play에 게시한 화면, 2026.11.20 확인. 설치·사용은 본인 훈련기관의 출결 방식에 맞춥니다.',hrdSource)];
