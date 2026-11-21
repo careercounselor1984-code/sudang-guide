@@ -231,19 +231,19 @@
       "id": "Q09",
       "question": "사람인·잡코리아 지원도 되나요?",
       "originalBasis": "M01 199·214, O03·O05, B09 / 자료 확인",
-      "relatedTopic": "missed",
+      "relatedTopic": "applications",
       "topicReferences": [
         [
           "law",
-          "제20조제5~7항"
+          "제12조·제18조·제26~27조"
         ],
         [
-          "rule",
-          "제14조"
+          "decree",
+          "제8조"
         ],
         [
           "manual",
-          "211~214쪽"
+          "199~200·214쪽"
         ]
       ],
       "individualConfirmation": false,
@@ -253,19 +253,19 @@
       "id": "Q10",
       "question": "아무 직무에 지원해도 횟수가 되나요?",
       "originalBasis": "M01 199·214·B02 / 자료 확인",
-      "relatedTopic": "activity",
+      "relatedTopic": "applications",
       "topicReferences": [
         [
           "law",
-          "제12조제5~6항·제26조"
+          "제12조·제18조·제26~27조"
         ],
         [
           "decree",
-          "제11조"
+          "제8조"
         ],
         [
           "manual",
-          "196·203~205쪽"
+          "199~200·214쪽"
         ]
       ],
       "individualConfirmation": false,
@@ -407,19 +407,19 @@
       "id": "Q17",
       "question": "고용24에서 지원한 내역은 어떻게 넣어요?",
       "originalBasis": "O01 / 자료 확인",
-      "relatedTopic": "applications",
+      "relatedTopic": "proof",
       "topicReferences": [
         [
           "law",
-          "제12조·제18조·제26~27조"
+          "제20조제5~7항"
         ],
         [
-          "decree",
-          "제8조"
+          "rule",
+          "제14조·별지 제11호서식"
         ],
         [
           "manual",
-          "199~200·214쪽"
+          "213~214쪽"
         ]
       ],
       "individualConfirmation": false,
@@ -671,19 +671,19 @@
       "id": "Q29",
       "question": "취업특강을 매번 들어도 되나요?",
       "originalBasis": "M01 198 / 자료 확인",
-      "relatedTopic": "training",
+      "relatedTopic": "exam",
       "topicReferences": [
         [
           "law",
-          "제12조·제18조·제26조"
+          "제18조·제20조"
         ],
         [
           "decree",
-          "제8조제1호"
+          "제8조"
         ],
         [
           "manual",
-          "196~198쪽"
+          "198~200·213~214쪽"
         ]
       ],
       "individualConfirmation": false,
@@ -891,19 +891,19 @@
       "id": "Q39",
       "question": "출근일이 잡혔어요. 언제 누구에게 알려요?",
       "originalBasis": "O01·M01 207 / 일부 확인",
-      "relatedTopic": "income",
+      "relatedTopic": "changes",
       "topicReferences": [
         [
           "law",
-          "제21조"
+          "제20조제7항·제21조·제29조"
         ],
         [
-          "decree",
-          "제9조·제9조의2"
+          "rule",
+          "제14조·제20조"
         ],
         [
           "manual",
-          "206~210쪽"
+          "201~202·206~210·227~230쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -913,19 +913,27 @@
       "id": "Q40",
       "question": "훈련이 폐강되거나 아파서 계획을 못 지켰어요.",
       "originalBasis": "M01 197·204~205, B01 연관 후기 / 일부 확인",
-      "relatedTopic": "income",
+      "relatedTopic": "illness",
       "topicReferences": [
         [
           "law",
-          "제21조"
+          "제11조·제12조·제20조·제29조제1항제5호"
         ],
         [
           "decree",
-          "제9조·제9조의2"
+          "제11조"
+        ],
+        [
+          "rule",
+          "제6조·제14조"
+        ],
+        [
+          "directive",
+          "제10조"
         ],
         [
           "manual",
-          "206~210쪽"
+          "203~205쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -935,19 +943,19 @@
       "id": "Q41",
       "question": "갤럭시에서 내려받은 서류가 안 보여요.",
       "originalBasis": "O10 / 자료 확인",
-      "relatedTopic": "income",
+      "relatedTopic": "proof",
       "topicReferences": [
         [
           "law",
-          "제21조"
+          "제20조제5~7항"
         ],
         [
-          "decree",
-          "제9조·제9조의2"
+          "rule",
+          "제14조·별지 제11호서식"
         ],
         [
           "manual",
-          "206~210쪽"
+          "213~214쪽"
         ]
       ],
       "individualConfirmation": false,
@@ -957,19 +965,19 @@
       "id": "Q42",
       "question": "아이폰에서 PDF는 어디에 저장돼요?",
       "originalBasis": "O09 / 일부 확인",
-      "relatedTopic": "income",
+      "relatedTopic": "proof",
       "topicReferences": [
         [
           "law",
-          "제21조"
+          "제20조제5~7항"
         ],
         [
-          "decree",
-          "제9조·제9조의2"
+          "rule",
+          "제14조·별지 제11호서식"
         ],
         [
           "manual",
-          "206~210쪽"
+          "213~214쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -979,19 +987,19 @@
       "id": "Q43",
       "question": "파일을 골랐는데 제대로 첨부됐는지 어떻게 알아요?",
       "originalBasis": "O01 / 일부 확인",
-      "relatedTopic": "income",
+      "relatedTopic": "proof",
       "topicReferences": [
         [
           "law",
-          "제21조"
+          "제20조제5~7항"
         ],
         [
-          "decree",
-          "제9조·제9조의2"
+          "rule",
+          "제14조·별지 제11호서식"
         ],
         [
           "manual",
-          "206~210쪽"
+          "213~214쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1361,19 +1369,19 @@
       "id": "Q60",
       "question": "일경험도 참여확인서와 출석 자료를 받아야 하나요?",
       "originalBasis": "M01 198·206~208 / 담당자 서류 안내",
-      "relatedTopic": "program",
+      "relatedTopic": "experience",
       "topicReferences": [
         [
           "law",
-          "제21조"
+          "제18조·제20~21조·제26조"
         ],
         [
           "decree",
-          "제9조·제9조의2제2호 단서"
+          "제8~9조"
         ],
         [
           "manual",
-          "206~210쪽"
+          "198·206~210·213~214쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1383,19 +1391,19 @@
       "id": "Q61",
       "question": "일경험 프로젝트형이라 출석일수가 없어요.",
       "originalBasis": "M01 198 / 자료 확인",
-      "relatedTopic": "activity",
+      "relatedTopic": "experience",
       "topicReferences": [
         [
           "law",
-          "제12조제5~6항·제26조"
+          "제18조·제20~21조·제26조"
         ],
         [
           "decree",
-          "제11조"
+          "제8~9조"
         ],
         [
           "manual",
-          "196·203~205쪽"
+          "198·206~210·213~214쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1427,19 +1435,19 @@
       "id": "Q63",
       "question": "소득을 신고하면 수당은 무조건 못 받나요?",
       "originalBasis": "M01 206~208·법 제21조·시행령 제9~9조의2 / 자료 확인 · L01·L02",
-      "relatedTopic": "activity",
+      "relatedTopic": "income",
       "topicReferences": [
         [
           "law",
-          "제12조제5~6항·제26조"
+          "제21조"
         ],
         [
           "decree",
-          "제11조"
+          "제9조·제9조의2"
         ],
         [
           "manual",
-          "196·203~205쪽"
+          "206~210쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1493,19 +1501,15 @@
       "id": "Q66",
       "question": "계좌가 잘못됐거나 압류되어 수당을 못 받아요.",
       "originalBasis": "M01 233~234, 법 제22~23조·L01 / 자료 확인",
-      "relatedTopic": "activity",
+      "relatedTopic": "account",
       "topicReferences": [
         [
           "law",
-          "제12조제5~6항·제26조"
-        ],
-        [
-          "decree",
-          "제11조"
+          "제22~23조"
         ],
         [
           "manual",
-          "196·203~205쪽"
+          "233~234쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1537,19 +1541,19 @@
       "id": "Q68",
       "question": "훈련장려금·일경험 소득을 고용24 어디에 적나요?",
       "originalBasis": "M01 206~208·O01 / 자료 확인",
-      "relatedTopic": "applications",
+      "relatedTopic": "program",
       "topicReferences": [
         [
           "law",
-          "제12조·제18조·제26~27조"
+          "제21조"
         ],
         [
           "decree",
-          "제8조"
+          "제9조·제9조의2제2호 단서"
         ],
         [
           "manual",
-          "199~200·214쪽"
+          "206~210쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1559,19 +1563,19 @@
       "id": "Q69",
       "question": "훈련장려금과 일경험 참여수당을 둘 다 받았어요.",
       "originalBasis": "M01 206~208 / 자료 확인",
-      "relatedTopic": "applications",
+      "relatedTopic": "program",
       "topicReferences": [
         [
           "law",
-          "제12조·제18조·제26~27조"
+          "제21조"
         ],
         [
           "decree",
-          "제8조"
+          "제9조·제9조의2제2호 단서"
         ],
         [
           "manual",
-          "199~200·214쪽"
+          "206~210쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1581,19 +1585,19 @@
       "id": "Q70",
       "question": "프로그램소득이면 수당 금액에 영향이 없나요?",
       "originalBasis": "M01 209~210·215, 시행령 제9조의2·L02 / 자료 확인",
-      "relatedTopic": "training",
+      "relatedTopic": "program",
       "topicReferences": [
         [
           "law",
-          "제12조·제18조·제26조"
+          "제21조"
         ],
         [
           "decree",
-          "제8조제1호"
+          "제9조·제9조의2제2호 단서"
         ],
         [
           "manual",
-          "196~198쪽"
+          "206~210쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1603,19 +1607,19 @@
       "id": "Q71",
       "question": "여러 달 훈련수당이 한 번에 입금됐어요.",
       "originalBasis": "M01 208 / 자료 확인",
-      "relatedTopic": "training",
+      "relatedTopic": "income",
       "topicReferences": [
         [
           "law",
-          "제12조·제18조·제26조"
+          "제21조"
         ],
         [
           "decree",
-          "제8조제1호"
+          "제9조·제9조의2"
         ],
         [
           "manual",
-          "196~198쪽"
+          "206~210쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1625,19 +1629,19 @@
       "id": "Q72",
       "question": "소득 증빙은 생략해도 된다고 들었는데 신고도 안 하나요?",
       "originalBasis": "M01 207 / 자료 확인",
-      "relatedTopic": "training",
+      "relatedTopic": "income",
       "topicReferences": [
         [
           "law",
-          "제12조·제18조·제26조"
+          "제21조"
         ],
         [
           "decree",
-          "제8조제1호"
+          "제9조·제9조의2"
         ],
         [
           "manual",
-          "196~198쪽"
+          "206~210쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1647,19 +1651,19 @@
       "id": "Q73",
       "question": "프리랜서·배달·사업소득은 매출 그대로 적나요?",
       "originalBasis": "M01 206~207 / 개별 산정 확인",
-      "relatedTopic": "exam",
+      "relatedTopic": "income",
       "topicReferences": [
         [
           "law",
-          "제18조·제20조"
+          "제21조"
         ],
         [
           "decree",
-          "제8조"
+          "제9조·제9조의2"
         ],
         [
           "manual",
-          "198~200·213~214쪽"
+          "206~210쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1809,19 +1813,19 @@
       "id": "Q80",
       "question": "아이가 태어나거나 부모님이 70세가 됐어요.",
       "originalBasis": "M01 193~194·202~203 / 자료 확인",
-      "relatedTopic": "changes",
+      "relatedTopic": "amount",
       "topicReferences": [
         [
           "law",
-          "제20조제7항·제21조·제29조"
-        ],
-        [
-          "rule",
-          "제14조·제20조"
+          "제19~22조"
         ],
         [
           "manual",
-          "201~202·206~210·227~230쪽"
+          "192~195쪽"
+        ],
+        [
+          "increase",
+          "2026년 인상 안내"
         ]
       ],
       "individualConfirmation": true,
@@ -1831,19 +1835,19 @@
       "id": "Q81",
       "question": "가족이 Ⅰ유형에 새로 참여하면 가족수당은요?",
       "originalBasis": "M01 194·202~203 / 자료 확인",
-      "relatedTopic": "changes",
+      "relatedTopic": "amount",
       "topicReferences": [
         [
           "law",
-          "제20조제7항·제21조·제29조"
-        ],
-        [
-          "rule",
-          "제14조·제20조"
+          "제19~22조"
         ],
         [
           "manual",
-          "201~202·206~210·227~230쪽"
+          "192~195쪽"
+        ],
+        [
+          "increase",
+          "2026년 인상 안내"
         ]
       ],
       "individualConfirmation": true,
@@ -1941,19 +1945,19 @@
       "id": "Q86",
       "question": "지급정지·중단·0원 처리는 다 같은 건가요?",
       "originalBasis": "M01 209·215 및 L02 / 자료 확인",
-      "relatedTopic": "program",
+      "relatedTopic": "three",
       "topicReferences": [
         [
           "law",
-          "제21조"
+          "제21조제5~6항·제26조제3~4항"
         ],
         [
           "decree",
-          "제9조·제9조의2제2호 단서"
+          "제9조의2·제11조제3~4항"
         ],
         [
           "manual",
-          "206~210쪽"
+          "203~205·209~210·213~215쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -1985,19 +1989,19 @@
       "id": "Q88",
       "question": "취업성공수당은 어디서 신청하고 무슨 서류를 내나요?",
       "originalBasis": "M01 232·O01 / 공식 메뉴·서류 확인",
-      "relatedTopic": "proof",
+      "relatedTopic": "success",
       "topicReferences": [
         [
           "law",
-          "제20조제5~7항"
+          "제17조"
         ],
         [
           "rule",
-          "제14조·별지 제11호서식"
+          "제13조·별지 제9호서식"
         ],
         [
           "manual",
-          "213~214쪽"
+          "220~232쪽, 일반 근로자 이직 223쪽·노무제공자 예외 228쪽·서류 232쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -2007,23 +2011,27 @@
       "id": "Q89",
       "question": "입금액이 이상하거나 중복 입금된 것 같아요.",
       "originalBasis": "M01 235~236·254 / 처리 확인",
-      "relatedTopic": "fraud",
+      "relatedTopic": "notice",
       "topicReferences": [
         [
           "law",
-          "제27~28조·제38조제2항"
-        ],
-        [
-          "decree",
-          "제12조"
+          "제21조제6항·제26조제4항·제28조·제30조"
         ],
         [
           "rule",
-          "제17~19조"
+          "제15~19조"
+        ],
+        [
+          "appeal",
+          "제87조제2항"
+        ],
+        [
+          "directive",
+          "제11조"
         ],
         [
           "manual",
-          "252~257쪽"
+          "215·252~257쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -2129,19 +2137,19 @@
       "id": "Q94",
       "question": "직업심리검사만 하면 구직활동 한 번으로 되나요?",
       "originalBasis": "M01 196·198 / 개인 계획·인정 조건 확인",
-      "relatedTopic": "exam",
+      "relatedTopic": "activity",
       "topicReferences": [
         [
           "law",
-          "제18조·제20조"
+          "제12조제5~6항·제26조"
         ],
         [
           "decree",
-          "제8조"
+          "제11조"
         ],
         [
           "manual",
-          "198~200·213~214쪽"
+          "196·203~205쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -2151,11 +2159,11 @@
       "id": "Q95",
       "question": "채용박람회에 다녀온 것만으로 증빙이 되나요?",
       "originalBasis": "M01 199·213~214 / 실제 활동별 확인",
-      "relatedTopic": "exam",
+      "relatedTopic": "applications",
       "topicReferences": [
         [
           "law",
-          "제18조·제20조"
+          "제12조·제18조·제26~27조"
         ],
         [
           "decree",
@@ -2163,7 +2171,7 @@
         ],
         [
           "manual",
-          "198~200·213~214쪽"
+          "199~200·214쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -2173,19 +2181,19 @@
       "id": "Q96",
       "question": "훈련장려금과 Ⅱ유형 훈련참여지원수당은 같은 건가요?",
       "originalBasis": "M01 192·206~208·O02·O16 / 제도 구분",
-      "relatedTopic": "exam",
+      "relatedTopic": "program",
       "topicReferences": [
         [
           "law",
-          "제18조·제20조"
+          "제21조"
         ],
         [
           "decree",
-          "제8조"
+          "제9조·제9조의2제2호 단서"
         ],
         [
           "manual",
-          "198~200·213~214쪽"
+          "206~210쪽"
         ]
       ],
       "individualConfirmation": true,
@@ -2469,7 +2477,7 @@
     },
     {
       "id": "Q109",
-      "question": "취업성공수당은 어떤 서류로 신청해요?",
+      "question": "취업 후 근로시간이나 고용보험 조건이 바뀌었어요.",
       "originalBasis": "M01 220~232쪽, 일반 근로자 이직 223쪽·노무제공자 예외 228쪽·서류 232쪽",
       "relatedTopic": "success",
       "topicReferences": [
@@ -2593,7 +2601,7 @@
   "checks": {
     "uniqueQuestions": 110,
     "allQuestionsHaveRelatedTopic": true,
-    "topicPages": 16,
+    "topicPages": 17,
     "unknownReferences": 0,
     "mobileWidths": [
       320,
